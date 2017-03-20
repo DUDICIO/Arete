@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+
+    <title>Eduvator</title>
+
+    <meta name="description" content="Arete">
+	<meta name="keywords" content="cover, reveal, grid, svg, animated, path, mask, image" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,500i,600,600i,700,700i,800,900" rel="stylesheet">
+
+    <!-- css3-mediaqueries.js for IE less than 9 -->
+
+<!-- [if lt IE 9]>ß
+
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+<![endif]-->
+  </head>
+  <body>
+  <!-- Modal -->
+	<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	        <div class="modal-footer">
+	        	<button type="button" class="close" data-dismiss="modal">x</button>
+	      	</div>
+	        <div class="bs-example bs-example-tabs">
+	            <ul id="myTab" class="nav nav-tabs">
+	              <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+	              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+	            </ul>
+	        </div>
+	        <div class="social-login">
+                                    <a class="circle twitter" href="#">
+                                        <i class="fa fa-twitter fa-fw"></i>
+                                    </a>
+                                    <a id="google_login" class="circle google" href="#">
+                                        <i class="fa fa-google-plus fa-fw"></i>
+                                    </a>
+                                    <a id="facebook_login" class="circle facebook" href="#">
+                                        <i class="fa fa-facebook fa-fw"></i>
+                                    </a>
+            </div>
+	      	<div class="modal-body">
+		        <div id="myTabContent" class="tab-content">
+			        <div class="tab-pane fade in" id="why">
+				        <div class="control-group">
+			              <label class="control-label" for="forgot-password">Email Address:</label>
+			              <div class="controls">
+			                <input required="" id="forgot" name="forgot" type="email" class="form-control" placeholder="yourmail@domain.com">
+			              </div>
+			            </div>
+			            <div class="control-group">
+			              <label class="control-label" for="forgot"></label>
+			              <div class="controls">
+			                <button id="recover" name="recover" class="btn btn-success">Recover Password</button>
+			              </div>
+			            </div>
+			        </div>
+			        <div class="tab-pane fade active in" id="signin">
+			            <form class="form-horizontal">
+			            <fieldset>
+			            <!-- Sign In Form -->
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="userid">Username or Email address:</label>
+			              <div class="controls">
+			                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="arete@dudic.io" class="input-medium" required="">
+			              </div>
+			            </div>
+
+			            <!-- Password input-->
+			            <div class="control-group">
+			              <label class="control-label" for="passwordinput">Password:</label>
+			              <div class="controls">
+			                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+			              </div>
+			            </div>
+
+			            <!-- Multiple Checkboxes (inline) -->
+			            <div class="control-group">
+			              <label class="control-label" for="rememberme"></label>
+			              <div class="controls">
+			                <label class="checkbox inline" for="rememberme-0">
+			                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+			                  <span>Remember me</span>
+			                  <a href="#why" data-toggle="tab" aria-expanded="true">Forgot Password :(</a>
+			                </label>
+			              </div>
+			            </div>
+
+			            <!-- Button -->
+			            <div class="control-group">
+			              <label class="control-label" for="signin"></label>
+			              <div class="controls">
+			                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+			              </div>
+			            </div>
+			            </fieldset>
+			            </form>
+			        </div>
+			        <div class="tab-pane fade" id="signup">
+			            <form class="form-horizontal">
+			            <fieldset>
+			            <!-- Sign Up Form -->
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="Email">Email:</label>
+			              <div class="controls">
+			                <input id="Email" name="Email" class="form-control" type="text" placeholder="arete@dudic.io" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="userid">Name:</label>
+			              <div class="controls">
+			                <input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Password input-->
+			            <div class="control-group">
+			              <label class="control-label" for="password">Password:</label>
+			              <div class="controls">
+			                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+			                <em>1-8 Characters</em>
+			              </div>
+			            </div>
+			            
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+			              <div class="controls">
+			                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Button -->
+			            <div class="control-group">
+			              <label class="control-label" for="confirmsignup"></label>
+			              <div class="controls">
+			                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+			              </div>
+			            </div>
+			            </fieldset>
+			            </form>
+			    	</div>
+	    		</div>
+	      	</div>
+	    </div>
+	  </div>
+	</div>
+    <div class="top-bar">
+		<div class="row">
+				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">		
+					<div class="logo">
+						<a href="../index.html">
+						<img class="logo" src="../img/logo.png">
+						</a>
+					</div>		
+					<div class="menu-button">
+						<button class="hamburger" style="display: inline-block;"><i class="fa fa-bars" aria-hidden="true"></i> <span class="visible-lg-inline">Menu</span></button>
+		                <button class="cross" style="display: none;"><i class="fa fa-times" aria-hidden="true"></i> <span class="visible-lg-inline">Menu</span></button>
+	                </div>
+	                <div class="search">
+				       <div>
+				    	<button class="search-open" style="display: inline-block;"><span  class="glyphicon glyphicon-search"></span><span class="visible-lg-inline">&nbsp;Search</span></button>
+		                <button class="search-close" style="display: none;"><span  class="glyphicon glyphicon-search"></span><span class="visible-lg-inline">&nbsp;Search</span></button>
+		               </div>
+				    	<div class="search-popup">
+					  		<div class="search-inner">
+					  		<button class="btn-srch" type="button">
+	                                 <span class=" glyphicon glyphicon-search"></span>
+	                        </button>
+					    	<input type="text" class="form-control search_bar" id="usr" placeholder="e.g, kinematics">
+							<select class="form-control search_select" id="sel1">
+							    <option>--Class--</option>
+							    <option>1st-3rd</option>
+							    <option>4th-6th</option>
+							    <option>7th-8th</option>
+							 </select>
+							 <select class="form-control search_select" id="sel1">
+							    <option>--Subject--</option>
+							    <option>Science</option>
+							    <option>Maths</option>
+							    <option>Humanities</option>
+							 </select>
+					  		</div>
+						</div>
+				  	</div>
+				  	<button class="create-story hidden-xs">
+				  		<a href="../create story.html">
+				  		<div class="story-button"><i class="fa fa-paint-brush" aria-hidden="true"></i>
+	  						<span class="visible-lg-inline">&nbsp;Create Story</span>
+	  					</div>
+	  					</a>
+				  	</button>
+				  	<button class="login" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">
+				  		<div class="create-button"><i class="fa fa-user" aria-hidden="true"></i>
+	  						<span class="visible-lg-inline">Login/Sign-up</span>
+	  					</div>
+				  	</button>
+				  	<div class="social hidden-xs hidden-sm">
+				  		<a href="https://medium.com/@Arete_DIC" target="_blank"> <i class="fa fa-medium fa-2x"></i></a>
+						<a href="https://twitter.com/aretedu" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a>
+				  	</div>
+				</nav>
+				<div class="menu">
+					<div class="menu-arete">
+					    <ul class="r3">
+						    <h4><strong>Arete Links</strong></h4>
+						    <a href="#"><li>Alternative Pedagogy</li></a>
+						    <a href="#"><li>Assessment</li></a>
+						    <a href="#"><li>Building Character</li></a>
+						    <a href="#"><li>Caliber</li></a>
+						    <a href="#"><li>Inclusive classrooms</li></a>
+						    <a href="#"><li>Teacher's diary</li></a>
+						    <a href="#"><li>Tricks and Trade</li></a>
+					    </ul>
+					    <ul class="r3">
+						    <h4><strong>Quick Links</strong></h4>
+						    <a href="../index.html"><li>Home</li></a>
+						    <a href="../about-us.html"><li>About Us</li></a>
+						    <a href="../teachers.html"><li>Teachers</li></a>
+						    <a href="../contact.html"><li>Feedback</li></a>
+						    <a href="../contact.html"><li>Contact Us</li></a>
+						    <a href="#"><li>Privacy Policy</li></a>
+						    <a href="#"><li>Sitemap</li></a>
+					    </ul>
+					    <ul class="r3">
+						    <h4><strong>Initiative By</strong></h4>
+						    <img class="initiative" src="../img/du.png">
+					    </ul>
+					</div>
+				</div> 
+		</div>
+	</div>
+	<div class="">
+		<div class="row">
+			<div class="main-image no-padding" style="background-image: url(../img/bg.jpg);">
+				<center><h1>A few things I have Learned about Learning</h1></center>
+				<center><h5 class="col-md-8 col-md-offset-2">Mehak Siddiqui takes us through the memories of her first class – when she learned how impactful activity-based learning can be for younger kids.</h5></center>
+				<div class="clearfix"></div>
+				<center><a href="#"><p><strong>Mehak Siddiqui</strong></p></a><p>Published on <span>22 October 2016</span></p></center>
+			</div>
+			<div class="col-md-8 col-md-offset-2 padding-top">
+				<div class="story-nav-left">
+					<div class="subjects">
+						<button class="btn btn-arete sub" type="button">
+						  Subjects <span class="badge">1</span>
+						</button>
+						<div class="tags">
+							Miscellaneous
+						</div>
+					</div>
+					<div class="classes">
+						<button class="btn btn-arete sub" type="button">
+						  Classes <span class="badge">1</span>
+						</button>
+						<div class="tags">
+							1st - 5th
+						</div>
+					</div>
+				</div>
+				<div class="story-nav-right">
+					<div class="progress impact">
+					  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+					    <span>Impact Quotient (80%)</span>
+					  </div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<article class="story-content">
+					<blockquote>
+					    <p><em>Thirty curious pairs of eyes look at me expectantly. My heart contracts as I realise that this is my moment. I finally have their attention after almost 10 minutes of trying; and I only have a few seconds before it flutters away again. Why didn&rsquo;t anyone ever tell me how difficult it is to get 11-year-olds to listen to you?</em></p>
+					</blockquote>
+					<p>&ldquo;So who remembers what a <span style="text-decoration: underline;">storyboard</span> is?&rdquo; I ask in a voice so loud I cannot believe it is mine. A babble of responses ensues almost before I have finished my question. I press a finger to my lips and hold a hand up in a gesture that conveys for the umpteenth time the ground rule that none of them ever wants to follow: if you want to speak, raise your hand and wait for your turn.</p>
+					<p>Most oblige my silent message. Some ignore it and turn to chat with their friends. I hope the frustration I feel is not visible on my face. For &ldquo;the classroom is a mirror&rdquo; says my colleague and trainer: if I am frustrated, my students will be frustrated too. And that is of course the last thing I need in this already crazy classroom. Yes, that&rsquo;s the word, &ldquo;crazy&rdquo;. Nothing else can describe my first forays into the world of <span style="text-decoration: underline;">inquiry-based teaching</span> at an education start-up that I joined fresh out of a <span style="text-decoration: underline;">master&rsquo;s program in communication</span>.</p>
+					<p>My responsibilities involved imparting <span style="text-decoration: underline;">STEM (Science, Technology, Engineering and Math) education</span> through hands-on activities like designing and building machines and robots, creating digital artifacts and &ndash; my personal favourite &ndash; shooting and editing movies! I completely related to the philosophy, so here I was doing the one thing I had always been sure I would never take up professionally &ndash; teaching!</p>
+					<p>A recent <span style="text-decoration: underline;">Pew Internet study</span> in the USA suggests that while students in today&rsquo;s &ldquo;always on&rdquo; world benefit from instant and constant access to a wealth of information, their attention span and desire for in-depth analysis is consequently diminished. &ldquo;Instant gratification&rdquo; and &ldquo;quick fixes&rdquo; that characterize the internet-driven world also lead to a &ldquo;loss of patience and a lack of deep thinking&rdquo;. This poses new challenges in the classroom, which can be overcome by hands-on, activity-based learning that incorporates the use of various manipulative sets to help focus students&rsquo; attention.</p>
+					<p>I have observed this first hand over the course of the past year working at a large urban school in Ahmedabad: whereas in a regular class, students are quiet, seemingly attentive and focused on &ldquo;getting it done&rdquo;; in my inquiry and activity-based class, there is animated discussion; laughter, and energy so palpable it drains me of mine. Students work in groups, facing both each other and me as opposed to sitting in rows facing only me. They brainstorm, ideate, discuss, at times argue, experiment, research, solve problems collaboratively, and most importantly&nbsp;<em>enjoy</em>&nbsp;themselves. They are usually having so much fun that they don&rsquo;t realize &ldquo;learning&rdquo; is taking place.</p>
+					
+					<p>Of course, it hasn&rsquo;t been all smooth sailing. Students often face difficulties working in groups that routinely get shuffled around due to the changing dynamics involved, and sometimes the brainstorming and discussions turn chaotic. Many times, I have felt robbed of energy from the strain of overusing my voice and I even fell ill with laryngitis, a condition I had never heard of before.</p>
+					<p>But looking back now, I feel the past year was a defining one. I not only taught children but also trained teachers, and in so doing realized how much easier it is to communicate with the former. Children are the most receptive beings, but also the most impressionable so I&rsquo;ve learned to be careful with the messages and ideologies I put across. It is amazing and somewhat flattering to see how they often expect me to have all the answers, but I waste no time in making it clear that I certainly don&rsquo;t and neither does anyone else. In fact, what stands out from my teaching sojourn is the fact that I learned a lot more than I taught, whether it&rsquo;s concepts of physics that I could never grasp back in the seventh grade, principles of algorithms that baffled me in computer science classes or the finer aspects of <span style="text-decoration: underline;">Movie Maker software</span>.</p>
+					<p>And when students demonstrated interest and enthusiasm in class, it pushed me to go the extra mile and do something&nbsp;<em>more</em>&nbsp;for them. I organized inter-class competitions, held quizzes, and incorporated fun ice-breaker games that boosted team spirit and enhanced the learning experience. I often found myself wanting to do my very best as a teacher no matter how exhausted I was, so that &ldquo;my kids&rdquo; (as I soon came to refer to all my students) could in turn achieve their very best. No doubt I have connected emotionally with a lot of them, especially the ones in whom I see bits of myself &ndash; those who are quiet and timid or afraid to try something new; those who hate working with others and just want to be left alone; those with self-confidence issues. In fact, it is perplexing to look back and realize that my most difficult class was also the one where I formed the deepest bonds.</p>
+					
+					<p>At the end of the academic year, I gave out &ldquo;awards&rdquo; to all my students &ndash; little bits of card mentioning their name and their &ldquo;special recognition&rdquo;. It was a way of appreciating where their strengths lay, whether it was in coming up with the most creative designs, having the most innovative ideas, or demonstrating great team skills. The card also included my contact details in case any of them wishes to connect with me later. I hope that at least a few will keep in touch and remember me as the teacher who asked a lot of questions but didn&rsquo;t have the answers to all. Because she would rather they discover it for themselves and come to accept that sometimes, there is more than one answer or no &ldquo;right&rdquo; answer. It&rsquo;s a philosophy that I believe will boost their natural creativity and help them grow into continually thinking, questioning, and innovative human beings. A plethora of factors interplay to shape a child&rsquo;s thought patterns, and 80 minutes a week is far from enough to bring about immediately measurable changes, but it&rsquo;s a start for sure. For as I heard someone at my workplace once say: &ldquo;Our job is not to start the fire; it&rsquo;s simply to light the spark.&rdquo;</p>
+				</article>
+				<div class="tag-div">
+					<h5 class="primary-color"><strong>Topics</strong></h5>
+					<div class="tags"><a href="#">Mehak Siddiqui</a></div> <div class="tags">First class</div> <div class="tags">Inquiry-based teaching</div> <div class="tags">hands-on learning</div> <div class="tags">designing</div> <div class="tags">tinkering</div> <div class="tags">digital communication</div> <div class="tags">attention span</div> <div class="tags">atlas</div> <div class="tags">interdisciplinary learning</div> <div class="tags">navigation</div> <div class="tags">appreciation</div> <div class="tags">assessment</div> <div class="tags">innovation</div>
+				</div>				<div class="story-author">
+					<h5><strong>Creative Curator</strong></h5>
+					<div class="author-imgdiv">
+						<img class="author-img img-responsive" src="../img/mehak siddiqui.jpg">
+						<button class="btn btn-sm btn-info btn-arete">Connect</button>
+					</div>
+					<div class="author-data">
+						<h5 class="primary-color"><strong>Mehak Siddiqui </strong></h5>
+						<p>Mehak Siddiqui is a writer based in Ahmedabad. After completing a master's degree in communication, she spent a year working with an education company that provides innovative experiential learning programs to schools across India. She is now working on her first novel and enjoys blogging, meditating and chatting over endless cups of chai. </p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="related-posts">
+					<h3>These might also interest you</h3>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+				<hr class="bottom-line">
+					<ul class="comment-strip">
+						<li title="45 Comments"><span class="change-icon story-comments"><i class="fa fa-comment-o" aria-hidden="true">&nbsp;45</i><i class="fa fa-comment" aria-hidden="true">&nbsp;45</i></span></li>
+						<li title="20 Shares"><span class="change-icon story-comments"><i class="fa fa-share-square-o" aria-hidden="true">&nbsp;20</i><i class="fa fa-share-square" aria-hidden="true">&nbsp;20</i></span></li>
+						<li title="38 Likes"><span class="change-icon story-comments"><i class="fa fa-heart-o" aria-hidden="true">&nbsp;38</i><i class="fa fa-heart" aria-hidden="true">&nbsp;38</i></span></li>
+						<li><h4><strong>Discussion</strong></h4></li>
+						<li>
+							<button type="button" class="btn btn-sm btn-info btn-arete">Give Ratings</button>
+							<span class="starRating">
+					        <input id="rating5" type="radio" name="rating" value="5">
+					        <label for="rating5">5</label>
+					        <input id="rating4" type="radio" name="rating" value="4">
+					        <label for="rating4">4</label>
+					        <input id="rating3" type="radio" name="rating" value="3" checked>
+					        <label for="rating3">3</label>
+					        <input id="rating2" type="radio" name="rating" value="2">
+					        <label for="rating2">2</label>
+					        <input id="rating1" type="radio" name="rating" value="1">
+					        <label for="rating1">1</label>
+					      </span>
+						</li>
+					</ul>
+				<hr class="bottom-line">
+			</div>
+			<div class="col-md-7 col-md-offset-2">
+				<div class="make-comment">
+					<img src="../img/dummy.png" class="avatar img-responsive">
+					<div class="comment-box">
+						<textarea class="comment" rows="5"></textarea>
+						<button title="This feature has been disabled in Alpha Version" class="btn btn-arete btn-sm btn-comment disabled">Comment</button>
+					</div>
+				</div>
+				<div class="recent-comments">
+					<h5><strong>Recent Comments</strong></h5>
+					<div class="comment-area">
+						<img src="../img/dummy.png" class="../img-responsive avatar">
+						<div class="comment-text">
+							<strong>Arete</strong>
+							<small><strong>14th October 2016</strong></small>
+							<p>We appriciate author's practices and initiatives to teach students in different and more intutive ways. It makes a classroom a joyful place and helps student grasp better and faster. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>© Copyright 2016. DIC, University of Delhi</p>
+	</div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

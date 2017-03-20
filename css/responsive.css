@@ -1,0 +1,232 @@
+@media (max-width: 768px)
+{
+.box-2, .box-9, .box-4 {
+    margin: 0 0 10px 0;
+}
+.box-1 {
+    margin: 0 0 0 0;
+}
+.box-2 {
+	height: auto;
+}
+.search {
+    margin-left: 15%;
+    margin-top: 16px;
+}
+.create-story {
+    margin: 16px 0 0 5px;
+}
+button.login {
+    margin: 16px 0 0 5px;
+}
+img.logo {
+    height: 30px;
+    width: auto;
+    margin-top: 14px;
+}
+.no-padding-left, .no-padding, .no-padding-right, .no-padding-center, .no-padding-left2, .no-padding-right2, .no-padding-center2, .no-padding-carousel {
+	padding: 0;
+	margin: 0;
+    height: auto;
+}
+div#box-8 {
+    margin-top: 10px;
+}
+.logo {
+    margin-left: 13px;
+}
+img.img-1 {
+    height: auto;
+    width: 100%;
+}
+.no-padding-stories {
+    padding: 0;
+}
+.related-stories {
+    width: 90%;
+    margin: 10px 5%;
+}
+#closeslide {
+    right: 25px;
+}
+.story-nav-left .btn, .tags{
+    padding: 0.4em;
+}
+.story-nav-left {
+    width: 100%;
+    float: left;
+}
+.story-nav-right {
+    width: 100%;
+    float: left;
+    margin-top: 2%;
+}
+.subjects {
+    margin-bottom: 1%;
+}
+button.sub {
+    width: 100px;
+}
+}
+@media (max-width: 480px)
+{
+	.menu-button {
+    width: 35%;
+}
+.social {
+    margin: 23px 0 0 0;
+    display: none;
+}
+.teacher-profile {
+    width: 40%;
+}
+.teacher-name h5 {
+    font-size: 12px;
+    padding: 0 4px;
+}
+.main-image h1 {
+    font-size: 25px;
+    padding: 10%;
+}
+.main-image h5 {
+    font-size: 15px;
+    padding: 0 10%;
+}
+.author-imgdiv {
+    width: 22%;
+    padding: 0;
+}
+.author-data {
+    width: 78%;
+}
+.pro-tabs {
+    display: inline-block;
+}
+.pro-tabs>li.active {
+    margin-bottom: -1px;
+}
+.pro-tabs>li {
+    font-size: 13px;
+    width: 50%;
+}
+}
+@media (min-width: 1022px) { 
+    .search {
+    margin-left: 12%;
+}
+img#img-10 {
+    padding-left: 5px;
+}
+div#box-7 {
+    padding-right: 5px;
+}
+div#infobox3r1c {
+    padding-right: 10px;
+    padding-left: 1px;
+}
+div#infobox3r2c {
+    padding-right: 10px;
+    padding-left: 1px;
+}
+div#infobox3r3c {
+    padding-left: 1px;
+}
+.u-page .excerpt-9 {
+    margin-bottom: 10px;
+    height: 100px;
+    overflow: hidden;
+    font-size: 14px;
+}
+}
+@media only screen and (min-width:1500px) and (max-width: 2000px)  {
+ .search {
+    margin-left: 14%;
+}
+ul.comment-strip li {
+    padding-right: 10%;
+}
+}
+@media only screen and (min-width:990px) and (max-width: 1440px)  {
+    .box-1 {
+    padding: 10px 15px;
+    max-height: 365px;
+    min-height: 237px;
+}
+p.heading-1 {
+    font-size: 30px;
+    height: 80px;
+}
+.main-image h1 {
+    margin-top: 5%;
+}
+}
+@media (max-width: 990px)
+{
+    .last-4, .last-3, .last-2, .last-1 {
+    width: 100%;
+}
+.search-popup {
+    width: 200px;
+    right: 0%;
+}
+}
+@media (min-width: 1440px) { 
+    p.excerpt-9 {
+    margin-bottom: 0;
+    min-height: 29%;
+}
+p.excerpt-2 {
+    height: 30%;
+    margin-bottom: 12%;
+}
+.stats-3 {
+    margin-top: 6%;
+}
+p.heading-9 {
+    font-size: 20px;
+    margin-bottom: 1%;
+    overflow: hidden;
+}
+.main-image h1 {
+    margin-top: 1%;
+}
+.u-page .excerpt-9 {
+    font-size: 16px;
+}
+}
+@media (max-width: 1440px) {
+    img.initiative {
+    width: 250px;
+}
+}
+@media only screen and (min-width:768px) and (max-width: 1240px)  {
+ul.comment-strip li {
+    display: inline-block;
+    padding-right: 4%;
+}
+.share {
+    margin-left: 18%;
+}
+}
+@media (min-width: 1441px) {
+    .author-img {
+    width: 80%;
+}
+.author-imgdiv button {
+    width: 80%;
+}
+}
+@media only screen and (min-width: 1300px) and (max-width: 1500px) {
+.stats-4 > .share {
+    margin-left: 14%;
+}
+.share {
+    margin-left: 28%;
+}
+.box-1 .share {
+    margin-left: 33%;
+}
+.box-3 .share {
+    margin-left: 33%;
+}
+}

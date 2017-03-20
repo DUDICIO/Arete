@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+
+    <title>Eduvator</title>
+
+    <meta name="description" content="Arete">
+	<meta name="keywords" content="cover, reveal, grid, svg, animated, path, mask, image" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,500i,600,600i,700,700i,800,900" rel="stylesheet">
+
+    <!-- css3-mediaqueries.js for IE less than 9 -->
+
+<!-- [if lt IE 9]>ß
+
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+<![endif]-->
+  </head>
+  <body>
+  <!-- Modal -->
+	<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	        <div class="modal-footer">
+	        	<button type="button" class="close" data-dismiss="modal">x</button>
+	      	</div>
+	        <div class="bs-example bs-example-tabs">
+	            <ul id="myTab" class="nav nav-tabs">
+	              <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+	              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+	            </ul>
+	        </div>
+	        <div class="social-login">
+                                    <a class="circle twitter" href="#">
+                                        <i class="fa fa-twitter fa-fw"></i>
+                                    </a>
+                                    <a id="google_login" class="circle google" href="#">
+                                        <i class="fa fa-google-plus fa-fw"></i>
+                                    </a>
+                                    <a id="facebook_login" class="circle facebook" href="#">
+                                        <i class="fa fa-facebook fa-fw"></i>
+                                    </a>
+            </div>
+	      	<div class="modal-body">
+		        <div id="myTabContent" class="tab-content">
+			        <div class="tab-pane fade in" id="why">
+				        <div class="control-group">
+			              <label class="control-label" for="forgot-password">Email Address:</label>
+			              <div class="controls">
+			                <input required="" id="forgot" name="forgot" type="email" class="form-control" placeholder="yourmail@domain.com">
+			              </div>
+			            </div>
+			            <div class="control-group">
+			              <label class="control-label" for="forgot"></label>
+			              <div class="controls">
+			                <button id="recover" name="recover" class="btn btn-success">Recover Password</button>
+			              </div>
+			            </div>
+			        </div>
+			        <div class="tab-pane fade active in" id="signin">
+			            <form class="form-horizontal">
+			            <fieldset>
+			            <!-- Sign In Form -->
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="userid">Username or Email address:</label>
+			              <div class="controls">
+			                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="arete@dudic.io" class="input-medium" required="">
+			              </div>
+			            </div>
+
+			            <!-- Password input-->
+			            <div class="control-group">
+			              <label class="control-label" for="passwordinput">Password:</label>
+			              <div class="controls">
+			                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+			              </div>
+			            </div>
+
+			            <!-- Multiple Checkboxes (inline) -->
+			            <div class="control-group">
+			              <label class="control-label" for="rememberme"></label>
+			              <div class="controls">
+			                <label class="checkbox inline" for="rememberme-0">
+			                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+			                  <span>Remember me</span>
+			                  <a href="#why" data-toggle="tab" aria-expanded="true">Forgot Password :(</a>
+			                </label>
+			              </div>
+			            </div>
+
+			            <!-- Button -->
+			            <div class="control-group">
+			              <label class="control-label" for="signin"></label>
+			              <div class="controls">
+			                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+			              </div>
+			            </div>
+			            </fieldset>
+			            </form>
+			        </div>
+			        <div class="tab-pane fade" id="signup">
+			            <form class="form-horizontal">
+			            <fieldset>
+			            <!-- Sign Up Form -->
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="Email">Email:</label>
+			              <div class="controls">
+			                <input id="Email" name="Email" class="form-control" type="text" placeholder="arete@dudic.io" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="userid">Name:</label>
+			              <div class="controls">
+			                <input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Password input-->
+			            <div class="control-group">
+			              <label class="control-label" for="password">Password:</label>
+			              <div class="controls">
+			                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+			                <em>1-8 Characters</em>
+			              </div>
+			            </div>
+			            
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+			              <div class="controls">
+			                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Button -->
+			            <div class="control-group">
+			              <label class="control-label" for="confirmsignup"></label>
+			              <div class="controls">
+			                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+			              </div>
+			            </div>
+			            </fieldset>
+			            </form>
+			    	</div>
+	    		</div>
+	      	</div>
+	    </div>
+	  </div>
+	</div>
+    <div class="top-bar">
+		<div class="row">
+				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">		
+					<div class="logo">
+						<a href="../index.html">
+						<img class="logo" src="../img/logo.png">
+						</a>
+					</div>		
+					<div class="menu-button">
+						<button class="hamburger" style="display: inline-block;"><i class="fa fa-bars" aria-hidden="true"></i> <span class="visible-lg-inline">Menu</span></button>
+		                <button class="cross" style="display: none;"><i class="fa fa-times" aria-hidden="true"></i> <span class="visible-lg-inline">Menu</span></button>
+	                </div>
+	                <div class="search">
+				       <div>
+				    	<button class="search-open" style="display: inline-block;"><span  class="glyphicon glyphicon-search"></span><span class="visible-lg-inline">&nbsp;Search</span></button>
+		                <button class="search-close" style="display: none;"><span  class="glyphicon glyphicon-search"></span><span class="visible-lg-inline">&nbsp;Search</span></button>
+		               </div>
+				    	<div class="search-popup">
+					  		<div class="search-inner">
+					  		<button class="btn-srch" type="button">
+	                                 <span class=" glyphicon glyphicon-search"></span>
+	                        </button>
+					    	<input type="text" class="form-control search_bar" id="usr" placeholder="e.g, kinematics">
+							<select class="form-control search_select" id="sel1">
+							    <option>--Class--</option>
+							    <option>1st-3rd</option>
+							    <option>4th-6th</option>
+							    <option>7th-8th</option>
+							 </select>
+							 <select class="form-control search_select" id="sel1">
+							    <option>--Subject--</option>
+							    <option>Science</option>
+							    <option>Maths</option>
+							    <option>Humanities</option>
+							 </select>
+					  		</div>
+						</div>
+				  	</div>
+				  	<button class="create-story hidden-xs">
+				  		<a href="../create story.html">
+				  		<div class="story-button"><i class="fa fa-paint-brush" aria-hidden="true"></i>
+	  						<span class="visible-lg-inline">&nbsp;Create Story</span>
+	  					</div>
+	  					</a>
+				  	</button>
+				  	<button class="login" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">
+				  		<div class="create-button"><i class="fa fa-user" aria-hidden="true"></i>
+	  						<span class="visible-lg-inline">Login/Sign-up</span>
+	  					</div>
+				  	</button>
+				  	<div class="social hidden-xs hidden-sm">
+				  		<a href="https://medium.com/@Arete_DIC" target="_blank"> <i class="fa fa-medium fa-2x"></i></a>
+						<a href="https://twitter.com/aretedu" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a>
+				  	</div>
+				</nav>
+				<div class="menu">
+					<div class="menu-arete">
+					    <ul class="r3">
+						    <h4><strong>Arete Links</strong></h4>
+						    <a href="#"><li>Alternative Pedagogy</li></a>
+						    <a href="#"><li>Assessment</li></a>
+						    <a href="#"><li>Building Character</li></a>
+						    <a href="#"><li>Caliber</li></a>
+						    <a href="#"><li>Inclusive classrooms</li></a>
+						    <a href="#"><li>Teacher's diary</li></a>
+						    <a href="#"><li>Tricks and Trade</li></a>
+					    </ul>
+					    <ul class="r3">
+						    <h4><strong>Quick Links</strong></h4>
+						    <a href="../index.html"><li>Home</li></a>
+						    <a href="../about-us.html"><li>About Us</li></a>
+						    <a href="../teachers.html"><li>Teachers</li></a>
+						    <a href="../contact.html"><li>Feedback</li></a>
+						    <a href="../contact.html"><li>Contact Us</li></a>
+						    <a href="#"><li>Privacy Policy</li></a>
+						    <a href="#"><li>Sitemap</li></a>
+					    </ul>
+					    <ul class="r3">
+						    <h4><strong>Initiative By</strong></h4>
+						    <img class="initiative" src="../img/du.png">
+					    </ul>
+					</div>
+				</div> 
+		</div>
+	</div>
+	<div class="">
+		<div class="row">
+			<div class="main-image no-padding" style="background-image: url(../img/bg.jpg);">
+				<center><h1>When maps break boundaries in the classroom!</h1></center>
+				<center><h5 class="col-md-8 col-md-offset-2">There is little space for maps in the geography sessions in schools. Chennai-based teacher Pradita Nambiar devised a creative way to help students think beyond the printed maps. After several brainstorming sessions and rethinking over spaces in the school, Pradita and her students created their world on a wall. Quite literally!   </h5></center>
+				<div class="clearfix"></div>
+				<center><a href="#"><p><strong>Pradita Nambiar</strong></p></a><p>Published on <span>20 October 2016</span></p></center>
+			</div>
+			<div class="col-md-8 col-md-offset-2 padding-top">
+				<div class="story-nav-left">
+					<div class="subjects">
+						<button class="btn btn-arete sub" type="button">
+						  Subjects <span class="badge">1</span>
+						</button>
+						<div class="tags">
+							Geography
+						</div>
+					</div>
+					<div class="classes">
+						<button class="btn btn-arete sub" type="button">
+						  Classes <span class="badge">1</span>
+						</button>
+						<div class="tags">
+							5th - 6th
+						</div>
+					</div>
+				</div>
+				<div class="story-nav-right">
+					<div class="progress impact">
+					  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+					    <span>Impact Quotient (80%)</span>
+					  </div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<article class="story-content">
+					<p>&ldquo;Can we see these boundaries separating countries on ground while travelling from one country to another,&rdquo; 11-year old Ishaan asked his geography teacher in an impromptu session. The question brought a baffling moment for his teacher Pradita Nambiar. Just when Pradita was set to begin the map-making classes with the students, this question made her rethink the way mapping and its teaching could shape students&rsquo; ideas about contemporary world. She also wondered how relegated mapping had become with just 2-3 marks assigned to it in the larger curricular structure. It was not her challenge alone; numerous social studies educators across the country grappled with the same challenge.</p>
+					<p>Pradita was just brought closer to the challenge by a student&rsquo;s query. She decided to do something creative and exhaustive with the children to entirely change the dimensions of map-making in classrooms. Pradita decide to try a world map project at school with children belonging to different age groups as she believed that this would help build a sense of community among them. This project also helped bust the popular belief among children that one has to be a skilled cartographer to create maps.</p>
+					<p>But why the world map? That was a critical question. Students&rsquo; innocent queries ponder as to how loosely we use the term political map in the class without once checking with the class what the term &lsquo;political&rsquo; means to them. This world map may not answer all their questions but will help them learn about the world that everybody shares.</p>
+					<p>How did she go about it? The first step was choosing the background surface on which the map would be drawn. It needed to be in a place where the children normally spend most of their time. It was not secluded safe spot where nobody would spoil it. The last thing she wanted it to be was a Mona Lisa that everybody admired but nobody knew what to do with. It had to be right amongst the children with unrestricted access.</p>
+					<p>Pradita also realized that there was no better place than the wall which stood facing the football field even if it meant that the map would get an occasional kick from a flying ball. She now how the creative exercise was conducted:</p>
+					<p><strong>Getting Started:</strong>&nbsp;The <a title="Grid Method" href="http://www.art-is-fun.com/grid-method/" target="_blank">grid method</a> was chosen as it lets one transfer information from pre-gridded map sheets on to any surface. Before beginning to make grids on the wall, the students were taught to draw grids and understand &lsquo;scaling up (enlarging) and down&rsquo; as the case may be.</p>
+					<p>The math teachers got into the act and got the children to</p>
+					<ol>
+					    <li>Draw a grid box with four corners at right angles.</li>
+					    <li>Check if corner to corner diagonals were of equal length.</li>
+					    <li>Practice exercises of scaling up. E.g., draw a square of side 8 cm. Make a grid on this square 98 cm which has smaller squares of 2 cm each. Thus 64 squares of 2 cm are formed. Now draw a flower or any other figure in this square. Create another grid of square 16 cms with side enlarged to 4 cm each. In both the grids the number of squares (which is 64) remains the same. Now when you draw the flower proportionately in the same grid as in the smaller box, we see that the image has grown but has retained its shape and proportion.</li>
+					</ol>
+					<p>I chose the <a title="Robinson Projection" href="https://www.geography.wisc.edu/maplib/robinson_projection.php" target="_blank">Robinson&rsquo;s projection</a>. &nbsp;According to this projection the length is twice the height. The proposed dimension was block size of 3/3 inches. The map would be 84 inches wide and 168 inches long. I had to keep in mind the heights of my little mapmakers too. The map also had to be at the eye level of the children so that they would be able to examine it in detail.</p>
+					<p>Children from grades 7, 6, 5, and 4 were involved in the project. The continents to be drawn were decided based on their syllabus.<br /> Grade 7 &ndash; Americas<br /> Grade 6 &ndash; Australia and Africa<br /> Grade 5 &ndash; Asia<br /> Grade 4 &ndash; Oceans and the seas</p>
+					<p>With all the expertise on drawing grids tucked under our arms, we embarked on drawing our big grid on the wall. Class 7 participated enthusiastically in drawing the grid box.</p>
+					<p>There were a number of challenges at this stage. How could I to ensure that the length of the square (parallel to the ground) was a straight line? Here I received help from my science teachers and we used a transparent tube with water and used the &lsquo;principle that water seeks its own level&rsquo;.</p>
+					<p>We had to draw 1568 blocks (28 rows and 56 columns). How did I draw these gridlines straight? This was resolved with ideas from a team of cartographers from Orient BlackSwan. I dipped twine in blue powder (clothes whitener) and gently tapped the twine on the wall. A straight line emerged.</p>
+					<p>It is nice to have a background surface that is clean and smooth. Some would even like to prime it. But I prefer the not so perfect surface with its uneven walls and an occasional crack, rain-washed paint and the green mossy surface at some places telling the tale of many a good monsoon. The wall enjoyed the shade of a neem tree. As the monsoon gave way to pleasant and cool weather, so too the map started taking shape. Children were working in groups of two, while one partner navigates through the grids, the other draws. Children were encouraged to switch tasks and as a group were solving problems they encountered along the way. Continents and countries began to emerge.</p>
+					<p>When children were drawing the countries and their boundaries, they began discussing the politics of maps. Now they were becoming aware of the neighbouring countries that share borders.</p>
+					<p>Children initially wanted to use colour schemes based on some physical feature. I let them make their own choices in this regard. We used colour pencils to accomplish this task. The children designed their own colour schemes. This was great fun for the younger children. I allowed them to use various shades of blue. They realized that the more colours they had, the easier it was and that lighter colours helped show the labels better. Children who weren&rsquo;t particularly adept at map drawing, however, made wonderful map painters.</p>
+					<p>If I am giving the impression that the map project was a cakewalk, then let me set it right. The children made mistakes &ndash; Africa met Spain at Gibraltar, the Mediterranean was landlocked. But correcting them was a great learning experience. There were a number of children who played the role of teachers and helped the others understand maps.</p>
+					<p>The atlas now had the grime and dust of the football field and I was very happy to see pencil markings on the maps. The atlas was now being considered a book full of fun; map making too was turning out to be joyful.</p>
+					<p>How did I know that I covered all the countries in the world? I sought the advice of the cartographers at <a href="http://cca-acc.org/resources/what-is-cartography/" target="_blank">Orient BlackSwan</a> who checked the accuracy of the labelling and positions. We used the chapter in the atlas which had all the countries of the world with their flags to ensure that we had done a foolproof job.</p>
+					<p>Did we draw all the tiny islands? Here I gave the children the liberty to draw the bigger islands in the group.</p>
+					<blockquote><p><strong>Labelling the map:</strong>&nbsp;The children labelled the continents, countries, water bodies, the Equator, etc., using black acrylic paint. During the making of the map, the children were made aware of the inter-relatedness of subjects. In this project maths, geography, and science intermingled with one another and were porous. This facilitated deeper understanding amongst children and was a great learning (unlearning!) experience for the teachers.</p></blockquote>
+					<blockquote><p><strong>Ways to use the world map:</strong>&nbsp;It can be used to draw the historic routes of explorers/navigators. The map could be used to depict global patterns in agriculture, population, former areas of colonialism, ocean currents. It can be used to reinforce mathematical skills in estimation like finding out the number of countries in a given region, creating bar graphs and pie charts to compare information between countries, interpreting statistics.</p></blockquote>
+					<p>How much did this cost us? Children brought acryclic paints from home and I got a few more from school. If a tag could be put on the hard work, enthusiasm, thoughts, ideas and feedback from the teachers, children and all involved in this project, then it is priceless!</p>
+					<p>How long did it take for us to complete this project? In truth, it is an ongoing activity. It will find its true purpose if it is used in various ways. The world keeps changing as seas change their course and nations rise and fall. Political changes are faster and more perceptible than geographical changes. Therefore, mapmakers need to constantly update their maps.</p>
+					<p>My map too has its own history. Some may naturally look on this work as &rsquo;patchy&rsquo; and the labelling as &lsquo;not evenly clear and well-written&rsquo;. This is an opening to sensitize them to the fact that the central purpose of this work is to have fun making maps, boost confidence and generate interest in geography and maps. Aesthetics can take the backseat in this case. For me the learning was in the journey.&nbsp;</p>
+				</article>
+				<div class="tag-div">
+					<h5 class="primary-color"><strong>Topics</strong></h5>
+					<div class="tags"><a href="#">Pradita Nambiar</a></div> <div class="tags">Cartography</div> <div class="tags">map-making</div> <div class="tags">geography</div> <div class="tags">grids</div> <div class="tags">visuals</div> <div class="tags">wall art</div> <div class="tags">elementary classes</div> <div class="tags">atlas</div> <div class="tags">interdisciplinary learning</div> <div class="tags">navigation</div> <div class="tags">activity-based teaching</div> <div class="tags">hands-on learning</div> 
+				</div>
+				<div class="story-author">
+					<h5><strong>Creative Curator</strong></h5>
+					<div class="author-imgdiv">
+						<img class="author-img img-responsive" src="../img/dummy.png">
+						<button class="btn btn-sm btn-info btn-arete">Connect</button>
+					</div>
+					<div class="author-data">
+						<h5 class="primary-color"><strong>Pradita Nambiar </strong></h5>
+						<p>Pradita Nambiar is an educator at heart. She has been a teacher with the Vidyaranya School in Hyderabad. Currently, Pradita is managing a preschool in Coimbatore, Tamil Nadu.    </p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="related-posts">
+					<h3>These might also interest you</h3>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+				<hr class="bottom-line">
+					<ul class="comment-strip">
+						<li title="45 Comments"><span class="change-icon story-comments"><i class="fa fa-comment-o" aria-hidden="true">&nbsp;45</i><i class="fa fa-comment" aria-hidden="true">&nbsp;45</i></span></li>
+						<li title="20 Shares"><span class="change-icon story-comments"><i class="fa fa-share-square-o" aria-hidden="true">&nbsp;20</i><i class="fa fa-share-square" aria-hidden="true">&nbsp;20</i></span></li>
+						<li title="38 Likes"><span class="change-icon story-comments"><i class="fa fa-heart-o" aria-hidden="true">&nbsp;38</i><i class="fa fa-heart" aria-hidden="true">&nbsp;38</i></span></li>
+						<li><h4><strong>Discussion</strong></h4></li>
+						<li>
+							<button type="button" class="btn btn-sm btn-info btn-arete">Give Ratings</button>
+							<span class="starRating">
+					        <input id="rating5" type="radio" name="rating" value="5">
+					        <label for="rating5">5</label>
+					        <input id="rating4" type="radio" name="rating" value="4">
+					        <label for="rating4">4</label>
+					        <input id="rating3" type="radio" name="rating" value="3" checked>
+					        <label for="rating3">3</label>
+					        <input id="rating2" type="radio" name="rating" value="2">
+					        <label for="rating2">2</label>
+					        <input id="rating1" type="radio" name="rating" value="1">
+					        <label for="rating1">1</label>
+					      </span>
+						</li>
+					</ul>
+				<hr class="bottom-line">
+			</div>
+			<div class="col-md-7 col-md-offset-2">
+				<div class="make-comment">
+					<img src="../img/dummy.png" class="avatar img-responsive">
+					<div class="comment-box">
+						<textarea class="comment" rows="5"></textarea>
+						<button title="This feature has been disabled in Alpha Version" class="btn btn-arete btn-sm btn-comment disabled">Comment</button>
+					</div>
+				</div>
+				<div class="recent-comments">
+					<h5><strong>Recent Comments</strong></h5>
+					<div class="comment-area">
+						<img src="../img/dummy.png" class="../img-responsive avatar">
+						<div class="comment-text">
+							<strong>Tushar Zukur</strong>
+							<small><strong>14th October 2016</strong></small>
+							<p>We appriciate author's practices and initiatives to teach students in different and more intutive ways. It makes a classroom a joyful place and helps student grasp better and faster. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>© Copyright 2016. DIC, University of Delhi</p>
+	</div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

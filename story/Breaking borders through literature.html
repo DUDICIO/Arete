@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+
+    <title>Eduvator</title>
+
+    <meta name="description" content="Arete">
+	<meta name="keywords" content="cover, reveal, grid, svg, animated, path, mask, image" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,500i,600,600i,700,700i,800,900" rel="stylesheet">
+
+    <!-- css3-mediaqueries.js for IE less than 9 -->
+
+	<!-- [if lt IE 9]>ß
+
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+	<![endif]-->
+  </head>
+  <body>
+  <!-- Modal -->
+	<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	        <div class="modal-footer">
+	        	<button type="button" class="close" data-dismiss="modal">x</button>
+	      	</div>
+	        <div class="bs-example bs-example-tabs">
+	            <ul id="myTab" class="nav nav-tabs">
+	              <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+	              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+	            </ul>
+	        </div>
+	        <div class="social-login">
+                                    <a class="circle twitter" href="#">
+                                        <i class="fa fa-twitter fa-fw"></i>
+                                    </a>
+                                    <a id="google_login" class="circle google" href="#">
+                                        <i class="fa fa-google-plus fa-fw"></i>
+                                    </a>
+                                    <a id="facebook_login" class="circle facebook" href="#">
+                                        <i class="fa fa-facebook fa-fw"></i>
+                                    </a>
+            </div>
+	      	<div class="modal-body">
+		        <div id="myTabContent" class="tab-content">
+			        <div class="tab-pane fade in" id="why">
+				        <div class="control-group">
+			              <label class="control-label" for="forgot-password">Email Address:</label>
+			              <div class="controls">
+			                <input required="" id="forgot" name="forgot" type="email" class="form-control" placeholder="yourmail@domain.com">
+			              </div>
+			            </div>
+			            <div class="control-group">
+			              <label class="control-label" for="forgot"></label>
+			              <div class="controls">
+			                <button id="recover" name="recover" class="btn btn-success">Recover Password</button>
+			              </div>
+			            </div>
+			        </div>
+			        <div class="tab-pane fade active in" id="signin">
+			            <form class="form-horizontal">
+			            <fieldset>
+			            <!-- Sign In Form -->
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="userid">Username or Email address:</label>
+			              <div class="controls">
+			                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="arete@dudic.io" class="input-medium" required="">
+			              </div>
+			            </div>
+
+			            <!-- Password input-->
+			            <div class="control-group">
+			              <label class="control-label" for="passwordinput">Password:</label>
+			              <div class="controls">
+			                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+			              </div>
+			            </div>
+
+			            <!-- Multiple Checkboxes (inline) -->
+			            <div class="control-group">
+			              <label class="control-label" for="rememberme"></label>
+			              <div class="controls">
+			                <label class="checkbox inline" for="rememberme-0">
+			                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+			                  <span>Remember me</span>
+			                  <a href="#why" data-toggle="tab" aria-expanded="true">Forgot Password :(</a>
+			                </label>
+			              </div>
+			            </div>
+
+			            <!-- Button -->
+			            <div class="control-group">
+			              <label class="control-label" for="signin"></label>
+			              <div class="controls">
+			                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+			              </div>
+			            </div>
+			            </fieldset>
+			            </form>
+			        </div>
+			        <div class="tab-pane fade" id="signup">
+			            <form class="form-horizontal">
+			            <fieldset>
+			            <!-- Sign Up Form -->
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="Email">Email:</label>
+			              <div class="controls">
+			                <input id="Email" name="Email" class="form-control" type="text" placeholder="arete@dudic.io" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="userid">Name:</label>
+			              <div class="controls">
+			                <input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Password input-->
+			            <div class="control-group">
+			              <label class="control-label" for="password">Password:</label>
+			              <div class="controls">
+			                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+			                <em>1-8 Characters</em>
+			              </div>
+			            </div>
+			            
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+			              <div class="controls">
+			                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Button -->
+			            <div class="control-group">
+			              <label class="control-label" for="confirmsignup"></label>
+			              <div class="controls">
+			                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+			              </div>
+			            </div>
+			            </fieldset>
+			            </form>
+			    	</div>
+	    		</div>
+	      	</div>
+	    </div>
+	  </div>
+	</div>
+    <div class="top-bar">
+		<div class="row">
+				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">		
+					<div class="logo">
+						<a href="../index.html">
+						<img class="logo" src="../img/logo.png">
+						</a>
+					</div>		
+					<div class="menu-button">
+						<button class="hamburger" style="display: inline-block;"><i class="fa fa-bars" aria-hidden="true"></i> <span class="visible-lg-inline">Menu</span></button>
+		                <button class="cross" style="display: none;"><i class="fa fa-times" aria-hidden="true"></i> <span class="visible-lg-inline">Menu</span></button>
+	                </div>
+	                <div class="search">
+				       <div>
+				    	<button class="search-open" style="display: inline-block;"><span  class="glyphicon glyphicon-search"></span><span class="visible-lg-inline">&nbsp;Search</span></button>
+		                <button class="search-close" style="display: none;"><span  class="glyphicon glyphicon-search"></span><span class="visible-lg-inline">&nbsp;Search</span></button>
+		               </div>
+				    	<div class="search-popup">
+					  		<div class="search-inner">
+					  		<button class="btn-srch" type="button">
+	                                 <span class=" glyphicon glyphicon-search"></span>
+	                        </button>
+					    	<input type="text" class="form-control search_bar" id="usr" placeholder="e.g, kinematics">
+							<select class="form-control search_select" id="sel1">
+							    <option>--Class--</option>
+							    <option>1st-3rd</option>
+							    <option>4th-6th</option>
+							    <option>7th-8th</option>
+							 </select>
+							 <select class="form-control search_select" id="sel1">
+							    <option>--Subject--</option>
+							    <option>Science</option>
+							    <option>Maths</option>
+							    <option>Humanities</option>
+							 </select>
+					  		</div>
+						</div>
+				  	</div>
+				  	<button class="create-story hidden-xs">
+				  		<a href="../create story.html">
+				  		<div class="story-button"><i class="fa fa-paint-brush" aria-hidden="true"></i>
+	  						<span class="visible-lg-inline">&nbsp;Create Story</span>
+	  					</div>
+	  					</a>
+				  	</button>
+				  	<button class="login" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">
+				  		<div class="create-button"><i class="fa fa-user" aria-hidden="true"></i>
+	  						<span class="visible-lg-inline">Login/Sign-up</span>
+	  					</div>
+				  	</button>
+				  	<div class="social hidden-xs hidden-sm">
+				  		<a href="https://medium.com/@Arete_DIC" target="_blank"> <i class="fa fa-medium fa-2x"></i></a>
+						<a href="https://twitter.com/aretedu" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a>
+				  	</div>
+				</nav>
+				<div class="menu">
+					<div class="menu-arete">
+					    <ul class="r3">
+						    <h4><strong>Arete Links</strong></h4>
+						    <a href="#"><li>Alternative Pedagogy</li></a>
+						    <a href="#"><li>Assessment</li></a>
+						    <a href="#"><li>Building Character</li></a>
+						    <a href="#"><li>Caliber</li></a>
+						    <a href="#"><li>Inclusive classrooms</li></a>
+						    <a href="#"><li>Teacher's diary</li></a>
+						    <a href="#"><li>Tricks and Trade</li></a>
+					    </ul>
+					    <ul class="r3">
+						    <h4><strong>Quick Links</strong></h4>
+						    <a href="../index.html"><li>Home</li></a>
+						    <a href="../about-us.html"><li>About Us</li></a>
+						    <a href="../teachers.html"><li>Teachers</li></a>
+						    <a href="../contact.html"><li>Feedback</li></a>
+						    <a href="../contact.html"><li>Contact Us</li></a>
+						    <a href="#"><li>Privacy Policy</li></a>
+						    <a href="#"><li>Sitemap</li></a>
+					    </ul>
+					    <ul class="r3">
+						    <h4><strong>Initiative By</strong></h4>
+						    <img class="initiative" src="../img/du.png">
+					    </ul>
+					</div>
+				</div> 
+		</div>
+	</div>
+	<div class="">
+		<div class="row">
+			<div class="main-image no-padding" style="background-image: url(../img/bg.jpg);">
+				<center><h1>Breaking borders through literature</h1></center>
+				<center><h5 class="col-md-8 col-md-offset-2">Tulika Bathija tells us how literature can be used to celebrate difference and cherish diversity in a classroom.</h5></center>
+				<div class="clearfix"></div>
+				<center><a href="#"><p><strong>Tulika Bathija</strong></p></a><p>Published on <span>17 October 2016</span></p></center>
+			</div>
+			<div class="col-md-8 col-md-offset-2 padding-top">
+				<div class="story-nav-left">
+					<div class="subjects">
+						<button class="btn btn-arete sub" type="button">
+						  Subjects <span class="badge">2</span>
+						</button>
+						<div class="tags">
+							Literature
+						</div>
+						<div class="tags">
+							English
+						</div>
+					</div>
+					<div class="classes">
+						<button class="btn btn-arete sub" type="button">
+						  Classes <span class="badge">1</span>
+						</button>
+						<div class="tags">
+							6yh - 8th
+						</div>
+					</div>
+				</div>
+				<div class="story-nav-right">
+					<div class="progress impact">
+					  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+					    <span>Impact Quotient (80%)</span>
+					  </div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<article class="story-content">
+					<p>When the Head of the English department shared with me that one of the units in the Language and Literature IB MYP (Middle Years Programme) curriculum for grade 6 students is Hope, a peace building initiative was the first thing that struck me. I discussed the idea with my HOD and the grade 6 teacher who taught the other class. We all agreed to weave in the theme of peace and friendship into this unit.</p>
+					<p>As part of our unit, we studied the text, <strong><em><a href="http://katherinepaterson.com/books/bridge-to-terabithia/" target="_blank">Bridge to Terabithia</a>&nbsp;</em></strong>by Katherine Paterson. Now, of course in terms of context and textual-themes, it is in no way related to friendship between India and Pakistan. But, it is a book that celebrates difference, cherishes diversity and gives us hope that humanity can co-exist in peace and harmony despite differences. No matter how different two people are, we can connect and build stronger bonds of friendship.</p>
+					<p><strong>Thought for Teachers</strong></p>
+					<ol>
+					    <li>When you introduce a class text, you often have no control over the selection, but you can play around with the story and allow students to take from it something more meaningful than just the basic elements of a story.</li>
+					    <li>Think of the topics and themes that the story deals with &ndash; power, friendship, violence, peace, morality etc.</li>
+					    <li>Think of global issues and recent events you can connect your themes to &ndash;If your book is about the Second World War, think of civil war in the present times like the Syrian conflict.</li>
+					    <li>Find out how you can make a difference as students and educators. Can you do a poster campaign? Write letters or start drives or movements?</li>
+					    <li>As English teachers, we are hard-pressed to cover language units like persuasive writing or letter writing. Find ways you can address textual themes through writing skills and use current global situations as content.</li>
+					    <li>This process helps students understand that literature is nothing but life itself.</li>
+					</ol>
+					<p>&nbsp;</p>
+					<p><strong>Unit Plan for peace-building initiatives</strong></p>
+					<p><strong>Aim:</strong> To write letters to students in conflict-torn regions &ndash; Kashmir, North East (Shillong) &amp; Pakistan (Islamabad)</p>
+					<p><strong>Writing skill:</strong> Letter writing</p>
+					<p><strong>Theme:</strong> Friendship</p>
+					<p><strong>Activity</strong></p>
+					<ol>
+					    <li>Indian students researched and find out information about Kashmir, Shillong &amp; Pakistan in groups.</li>
+					    <li>Information related to food, cultural traditions, politics, languages and people was presented in groups through charts and posters.</li>
+					    <li>The above activity was to get a basic understanding of these regions through media.</li>
+					    <li>Students prepared a list of questions about what they would like to ask their Pakistani, North-East or Kashmiri pen friends.</li>
+					</ol>
+					<p><strong><em>E.g. What clothes do you usually wear?</em></strong></p>
+					<p><strong><em>How is the education system?</em></strong></p>
+					<p><strong><em>What books do you like to read?</em></strong></p>
+					<ol>
+					    <li>Students were encouraged to ask personal and non-political questions so that they could connect with each other at a personal level to find out how similar or different they truly are.</li>
+					    <li>Students wrote letters including their questions and share personal information about themselves.</li>
+					    <li>The letters were posted to the respective schools in Kashmir, Islamabad and Shillong.</li>
+					    <li>Students in those schools read and responded to letters sent from Bombay.</li>
+					    <li>Once their letters reached Bombay, students read them and found out firsthand how similar their habits &amp; interests are.</li>
+					</ol>
+					<p>Any form of writing activity needs a purpose and an audience. Students will be interested in writing if they are asked to write to &ldquo;real&rdquo; people. Making &ldquo;real&rdquo; friends and building bridges was the main purpose. But, through this activity students learnt how to write informal letters as well. As teachers, even with a restricted, rigid curriculum we can explore the texts and themes to innovate and create new teaching strategies and enriching learning experiences.</p>
+					<p>Student a: "This was an amazing exercise. I learnt a lot about how the children in Kashmir are just like us. This exercise also shattered our myths &hellip; what we assume on the basis of what we see in news. All of them aren't poor but some are actually rich if I may say. I was also really impressed with the handwriting."</p>
+					
+					<p>Student b: The activity that we did was wonderful. I had the opportunity to connect to the amazing students of Shillong. I found it very meaningful to communicate in the form of letters. I would love to thank Ms. Tulika for this. This activity was much different from the others because when we write no one really sees or views it. But this time we did get a letter back!"</p>
+					
+					<p>Student c: &ldquo;I was very excited when I first heard about this activity. I sent my letter to a student in Pakistan. I was very nervous when I got the letter. This was a very unique activity because when a person thinks about English they think essays or story writing!"</p>
+					<p>It also brought us closer to the art of letter writing &hellip; with time we are switching to faster means of communication and</p>
+					
+					<p>Student d: "I loved writing and receiving those letters to and from the children who lived in Pakistan. The letter that I got was beautiful and uplifting, I had never thought that a person that I had never met could be so kind or sweet it was fantastic. When I gave them my letter I made sure to be as caring and sweet as she was and I think I did that. Thank you to Ms. Tulika for conducting this activity."</p>
+					
+					<p>Student e: "Through this activity I learnt that not everybody is the same but each one of us will have a similar point. This was a unit initiated activity and the letter I received was in such good handwriting that I thought it was printed. The letter was short but I loved the language he used. I&nbsp;wrote to a student in Pakistan. This activity was very touching and helpful."</p>
+				</article>
+				<div class="tag-div">
+					<h5 class="primary-color"><strong>Topics</strong></h5>
+					<div class="tags"><a href="#">Conflict</a></div> <div class="tags">connections</div> <div class="tags">friendship</div> <div class="tags">peer learning</div> <div class="tags">literature</div> <div class="tags">writing skills</div> <div class="tags">political contexts</div> <div class="tags">letter writing</div> <div class="tags">textual themes</div> <div class="tags">Katherine Paterson</div><div class="tags">English</div><div class="tags">Indo-Pak</div><div class="tags">peace-building</div>
+				</div>
+				<div class="story-author">
+					<h5><strong>Creative Curator</strong></h5>
+					<div class="author-imgdiv">
+						<img class="author-img img-responsive" src="../img/tulika.jpg">
+						<button class="btn btn-sm btn-info btn-arete">Connect</button>
+					</div>
+					<div class="author-data">
+						<h5 class="primary-color"><strong>Tulika Bathija</strong></h5>
+						<p>Tulika Bathija is an ESL specialist and English teacher at Ecole Mondiale World School, Mumbai. She has done extensive research in children's narrative writing. She hold a BA in English Literature and has completed her MA and MPhil in English Language Education from The English and Foreign Languages University, Hyderabad. She is in search of her Sindhi heritage and ardently participates in Indo-Pak peace initiatives. </p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="related-posts">
+					<h3>These might also interest you</h3>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+				<hr class="bottom-line">
+					<ul class="comment-strip">
+						<li title="45 Comments"><span class="change-icon story-comments"><i class="fa fa-comment-o" aria-hidden="true">&nbsp;45</i><i class="fa fa-comment" aria-hidden="true">&nbsp;45</i></span></li>
+						<li title="20 Shares"><span class="change-icon story-comments"><i class="fa fa-share-square-o" aria-hidden="true">&nbsp;20</i><i class="fa fa-share-square" aria-hidden="true">&nbsp;20</i></span></li>
+						<li title="38 Likes"><span class="change-icon story-comments"><i class="fa fa-heart-o" aria-hidden="true">&nbsp;38</i><i class="fa fa-heart" aria-hidden="true">&nbsp;38</i></span></li>
+						<li><h4><strong>Discussion</strong></h4></li>
+						<li>
+							<button type="button" class="btn btn-sm btn-info btn-arete">Give Ratings</button>
+							<span class="starRating">
+					        <input id="rating5" type="radio" name="rating" value="5">
+					        <label for="rating5">5</label>
+					        <input id="rating4" type="radio" name="rating" value="4">
+					        <label for="rating4">4</label>
+					        <input id="rating3" type="radio" name="rating" value="3" checked>
+					        <label for="rating3">3</label>
+					        <input id="rating2" type="radio" name="rating" value="2">
+					        <label for="rating2">2</label>
+					        <input id="rating1" type="radio" name="rating" value="1">
+					        <label for="rating1">1</label>
+					      </span>
+						</li>
+					</ul>
+				<hr class="bottom-line">
+			</div>
+			<div class="col-md-7 col-md-offset-2">
+				<div class="make-comment">
+					<img src="../img/dummy.png" class="avatar img-responsive">
+					<div class="comment-box">
+						<textarea class="comment" rows="5"></textarea>
+						<button title="This feature has been disabled in Alpha Version" class="btn btn-arete btn-sm btn-comment disabled">Comment</button>
+					</div>
+				</div>
+				<div class="recent-comments">
+					<h5><strong>Recent Comments</strong></h5>
+					<div class="comment-area">
+						<img src="../img/dummy.png" class="../img-responsive avatar">
+						<div class="comment-text">
+							<strong>Arete</strong>
+							<small><strong>14th October 2016</strong></small>
+							<p>We appriciate author's practices and initiatives to teach students in different and more intutive ways. It makes a classroom a joyful place and helps student grasp better and faster. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>© Copyright 2016. DIC, University of Delhi</p>
+	</div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

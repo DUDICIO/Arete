@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+
+    <title>Eduvator</title>
+
+    <meta name="description" content="Arete">
+	<meta name="keywords" content="cover, reveal, grid, svg, animated, path, mask, image" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,500i,600,600i,700,700i,800,900" rel="stylesheet">
+
+    <!-- css3-mediaqueries.js for IE less than 9 -->
+
+<!-- [if lt IE 9]>ß
+
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+<![endif]-->
+  </head>
+  <body>
+  <!-- Modal -->
+	<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	        <div class="modal-footer">
+	        	<button type="button" class="close" data-dismiss="modal">x</button>
+	      	</div>
+	        <div class="bs-example bs-example-tabs">
+	            <ul id="myTab" class="nav nav-tabs">
+	              <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+	              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+	            </ul>
+	        </div>
+	        <div class="social-login">
+                                    <a class="circle twitter" href="#">
+                                        <i class="fa fa-twitter fa-fw"></i>
+                                    </a>
+                                    <a id="google_login" class="circle google" href="#">
+                                        <i class="fa fa-google-plus fa-fw"></i>
+                                    </a>
+                                    <a id="facebook_login" class="circle facebook" href="#">
+                                        <i class="fa fa-facebook fa-fw"></i>
+                                    </a>
+            </div>
+	      	<div class="modal-body">
+		        <div id="myTabContent" class="tab-content">
+			        <div class="tab-pane fade in" id="why">
+				        <div class="control-group">
+			              <label class="control-label" for="forgot-password">Email Address:</label>
+			              <div class="controls">
+			                <input required="" id="forgot" name="forgot" type="email" class="form-control" placeholder="yourmail@domain.com">
+			              </div>
+			            </div>
+			            <div class="control-group">
+			              <label class="control-label" for="forgot"></label>
+			              <div class="controls">
+			                <button id="recover" name="recover" class="btn btn-success">Recover Password</button>
+			              </div>
+			            </div>
+			        </div>
+			        <div class="tab-pane fade active in" id="signin">
+			            <form class="form-horizontal">
+			            <fieldset>
+			            <!-- Sign In Form -->
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="userid">Username or Email address:</label>
+			              <div class="controls">
+			                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="arete@dudic.io" class="input-medium" required="">
+			              </div>
+			            </div>
+
+			            <!-- Password input-->
+			            <div class="control-group">
+			              <label class="control-label" for="passwordinput">Password:</label>
+			              <div class="controls">
+			                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+			              </div>
+			            </div>
+
+			            <!-- Multiple Checkboxes (inline) -->
+			            <div class="control-group">
+			              <label class="control-label" for="rememberme"></label>
+			              <div class="controls">
+			                <label class="checkbox inline" for="rememberme-0">
+			                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+			                  <span>Remember me</span>
+			                  <a href="#why" data-toggle="tab" aria-expanded="true">Forgot Password :(</a>
+			                </label>
+			              </div>
+			            </div>
+
+			            <!-- Button -->
+			            <div class="control-group">
+			              <label class="control-label" for="signin"></label>
+			              <div class="controls">
+			                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+			              </div>
+			            </div>
+			            </fieldset>
+			            </form>
+			        </div>
+			        <div class="tab-pane fade" id="signup">
+			            <form class="form-horizontal">
+			            <fieldset>
+			            <!-- Sign Up Form -->
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="Email">Email:</label>
+			              <div class="controls">
+			                <input id="Email" name="Email" class="form-control" type="text" placeholder="arete@dudic.io" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="userid">Name:</label>
+			              <div class="controls">
+			                <input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Password input-->
+			            <div class="control-group">
+			              <label class="control-label" for="password">Password:</label>
+			              <div class="controls">
+			                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+			                <em>1-8 Characters</em>
+			              </div>
+			            </div>
+			            
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+			              <div class="controls">
+			                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Button -->
+			            <div class="control-group">
+			              <label class="control-label" for="confirmsignup"></label>
+			              <div class="controls">
+			                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+			              </div>
+			            </div>
+			            </fieldset>
+			            </form>
+			    	</div>
+	    		</div>
+	      	</div>
+	    </div>
+	  </div>
+	</div>
+    <div class="top-bar">
+		<div class="row">
+				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">		
+					<div class="logo">
+						<a href="../index.html">
+						<img class="logo" src="../img/logo.png">
+						</a>
+					</div>		
+					<div class="menu-button">
+						<button class="hamburger" style="display: inline-block;"><i class="fa fa-bars" aria-hidden="true"></i> <span class="visible-lg-inline">Menu</span></button>
+		                <button class="cross" style="display: none;"><i class="fa fa-times" aria-hidden="true"></i> <span class="visible-lg-inline">Menu</span></button>
+	                </div>
+	                <div class="search">
+				       <div>
+				    	<button class="search-open" style="display: inline-block;"><span  class="glyphicon glyphicon-search"></span><span class="visible-lg-inline">&nbsp;Search</span></button>
+		                <button class="search-close" style="display: none;"><span  class="glyphicon glyphicon-search"></span><span class="visible-lg-inline">&nbsp;Search</span></button>
+		               </div>
+				    	<div class="search-popup">
+					  		<div class="search-inner">
+					  		<button class="btn-srch" type="button">
+	                                 <span class=" glyphicon glyphicon-search"></span>
+	                        </button>
+					    	<input type="text" class="form-control search_bar" id="usr" placeholder="e.g, kinematics">
+							<select class="form-control search_select" id="sel1">
+							    <option>--Class--</option>
+							    <option>1st-3rd</option>
+							    <option>4th-6th</option>
+							    <option>7th-8th</option>
+							 </select>
+							 <select class="form-control search_select" id="sel1">
+							    <option>--Subject--</option>
+							    <option>Science</option>
+							    <option>Maths</option>
+							    <option>Humanities</option>
+							 </select>
+					  		</div>
+						</div>
+				  	</div>
+				  	<button class="create-story hidden-xs">
+				  		<a href="../create story.html">
+				  		<div class="story-button"><i class="fa fa-paint-brush" aria-hidden="true"></i>
+	  						<span class="visible-lg-inline">&nbsp;Create Story</span>
+	  					</div>
+	  					</a>
+				  	</button>
+				  	<button class="login" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">
+				  		<div class="create-button"><i class="fa fa-user" aria-hidden="true"></i>
+	  						<span class="visible-lg-inline">Login/Sign-up</span>
+	  					</div>
+				  	</button>
+				  	<div class="social hidden-xs hidden-sm">
+				  		<a href="https://medium.com/@Arete_DIC" target="_blank"> <i class="fa fa-medium fa-2x"></i></a>
+						<a href="https://twitter.com/aretedu" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a>
+				  	</div>
+				</nav>
+				<div class="menu">
+					<div class="menu-arete">
+					    <ul class="r3">
+						    <h4><strong>Arete Links</strong></h4>
+						    <a href="#"><li>Alternative Pedagogy</li></a>
+						    <a href="#"><li>Assessment</li></a>
+						    <a href="#"><li>Building Character</li></a>
+						    <a href="#"><li>Caliber</li></a>
+						    <a href="#"><li>Inclusive classrooms</li></a>
+						    <a href="#"><li>Teacher's diary</li></a>
+						    <a href="#"><li>Tricks and Trade</li></a>
+					    </ul>
+					    <ul class="r3">
+						    <h4><strong>Quick Links</strong></h4>
+						    <a href="../index.html"><li>Home</li></a>
+						    <a href="../about-us.html"><li>About Us</li></a>
+						    <a href="../teachers.html"><li>Teachers</li></a>
+						    <a href="../contact.html"><li>Feedback</li></a>
+						    <a href="../contact.html"><li>Contact Us</li></a>
+						    <a href="#"><li>Privacy Policy</li></a>
+						    <a href="#"><li>Sitemap</li></a>
+					    </ul>
+					    <ul class="r3">
+						    <h4><strong>Initiative By</strong></h4>
+						    <img class="initiative" src="../img/du.png">
+					    </ul>
+					</div>
+				</div> 
+		</div>
+	</div>
+	<div class="">
+		<div class="row">
+			<div class="main-image no-padding" style="background-image: url(../img/bg.jpg);">
+				<center><h1>Reading the map with their fingers</h1></center>
+				<center><h5 class="col-md-8 col-md-offset-2">Map reading is a key skill in geography. Kalyani Chandramouli explored ways to make map-reading meaningful to students with vision loss.</h5></center>
+				<div class="clearfix"></div>
+				<center><a href="#"><p><strong>Kalyani Chandramouli</strong></p></a><p>Published on <span>25 October 2016</span></p></center>
+			</div>
+			<div class="col-md-8 col-md-offset-2 padding-top">
+				<div class="story-nav-left">
+					<div class="subjects">
+						<button class="btn btn-arete sub" type="button">
+						  Subjects <span class="badge">1</span>
+						</button>
+						<div class="tags">
+							Geography
+						</div>
+					</div>
+					<div class="classes">
+						<button class="btn btn-arete sub" type="button">
+						  Classes <span class="badge">1</span>
+						</button>
+						<div class="tags">
+							All
+						</div>
+					</div>
+				</div>
+				<div class="story-nav-right">
+					<div class="progress impact">
+					  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+					    <span>Impact Quotient (80%)</span>
+					  </div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<article class="story-content">
+					<p>I have been working with visually impaired students for more than 20 years. I started as a volunteer with Little Flower School for the Blind. As my understanding of their impairment developed, I started working with older students from home. I help them with their graduation, teacher training, and their PhD theses. Blindness is an impairment that can be overcome with proper training and guidance. Blindness need not prevent a person from living a happy, normal life. To compensate for their loss of vision, visually impaired persons use their other senses to the optimum level. Their hands become their eyes. They learn everything with the use of their hands.</p>
+					<p>As a volunteer I try to put myself in their shoes to understand their specific needs and their difficulties in learning in general and specific subjects in particular. I try to understand the concepts, skills, and facts in each subject and find the best means of enabling my students to learn them.</p>
+					<p>Teaching geography was a challenge for me as much as learning geographic concepts and skills probably was to them. Map reading is one of the most basic and important skills needed to understand geography better.</p>
+					<p>Hence, I started exploring ways to make map-reading easier, interesting and meaningful to students with vision loss. One of my ideas was to make a tactile map.</p>
+					<p>A like-minded friend joined me in this venture. After several attempts, we were successful in making a tactile map of India.</p>
+					<p>First, we drew the outline of the map of India on a thermocol sheet with near-perfect latitudes and longitudes. Using double-thread, we marked the boundary lines and for state boundaries we used single-thread and stuck them using fevicol. Each state was marked out with different materials having different textures, such as fabric, pulses, sand, ceramic, cotton, and even sticker-<em>bindi</em>. A woollen thread running across the country became the Tropic of Cancer.</p>
+					<p>We also found a way of explaining the location of the different states by relating them to our anatomy as given below.</p>
+					<p>That the map of India resembled a human body was a great help. Jammu &amp; Kashmir &ndash; face; Himachal Pradesh &ndash; neck; Punjab, Uttaranchal and Haryana &ndash; collar and bow; Rajasthan, Uttar Pradesh &ndash; chest; Madhya Pradesh &ndash; stomach; Maharashtra, Chhattisgarh, Orissa &ndash; waist; Karnataka, Andhra Pradesh &ndash; knees; Kerala, Tamil Nadu &ndash; legs; Gujarat &ndash; right arm akimbo; the North East States (the Seven Sisters) &ndash; a handkerchief hanging down from the stretched left hand.</p>
+					<p>Visually impaired students can feel this tactile map and visualize the map of India &ndash; her shape, as well as the shapes and position of the different states and the neighbouring countries. Similarly, a tactile map of the world was made using materials with different textures. The Greenwich Meridian and the Equator are marked using thick woollen threads. These two lines intersect at Gulf of Guinea in the west part of Africa. They use this as their starting point to read the world map. Again, they remember that Africa is the only continent through which the three important latitudes &ndash; the Tropic of Cancer, the Tropic of Capricorn and the Equator pass; Australia is the only continent to the east of Gulf of Guinea through which only the Tropic of Capricorn passes; South America is the only continent to the west of Gulf of Guinea through which the two important latitudes &ndash; the Equator and the Tropic of Capricorn pass.</p>
+					<p>They slowly move their sensitive fingers to the east of Gulf Guinea along the Tropic of Cancer to locate India. They know that the first country they come across is Saudi Arabia; they move further towards east carefully along the Tropic of Cancer and stop after crossing Gujarat. Then they try to locate the Equator because they know that India lies 8 degrees north of the Equator. You can see a big smile on their face after this achievement.</p>
+					<p><b>What are tactile graphics? </b></p>
+					<p>Tactile graphics are means of conveying non-textual information to people who are blind or visually impaired. They may include tactile representations of pictures, maps, graphs, diagrams and other <a href="http://www.pathstoliteracy.org/tactile-graphics" target="_blank">images</a>.</p>
+					<p>I wanted my students to know about India, her political divisions, her location in the world and also the location of other continents in the world. Slowly an idea evolved in my mind and with help of some of my friends I was able to prepare the tactile map of India and the world. These tactile maps helped my students to understand concepts like longitude, latitude, equator, Greenwich Meridian, northern hemisphere, southern hemisphere and so on. They were very much excited when they studied the political map of India because that was the first time they were able to understand the distances between Stat es. One of them exclaimed, &ldquo;Wow! Our capital is so tiny and so far away from Tamil Nadu&rdquo;. Another one said that the name Sikkim is very apt to that State because it is caught between Bhutan Nepal and Tibet, (in Tamil language &lsquo;SIKKU&rsquo; means &lsquo;Caught in between something&rsquo;). I was amazed at their sense of humour.</p>
+					<p>My student-teachers, who teach Social Science in regular Government schools, are able to teach India map to their students and have created an interest in map reading in them. As a result the students who were earlier scared even to attempt questions on maps were able to score marks on them.</p>
+					<p>I have learnt valuable lessons for life &ndash; a positive outlook of life and self-confidence &ndash; from my association with them.</p>
+				</article>
+				<div class="tag-div">
+					<h5 class="primary-color"><strong>Topics</strong></h5>
+					<div class="tags"><a href="#">Kalyani Chandramouli</a></div> <div class="tags">Inclusivity</div> <div class="tags">visually impaired students</div> <div class="tags">empathy</div> <div class="tags">tactile maps</div> <div class="tags">experiences</div> <div class="tags">geography</div> <div class="tags">visualisation</div> <div class="tags">atlas</div> <div class="tags">anatomy</div>
+				</div>
+				<div class="story-author">
+					<h5><strong>Creative Curator</strong></h5>
+					<div class="author-imgdiv">
+						<img class="author-img img-responsive" src="../img/kalyani.jpg">
+						<button class="btn btn-sm btn-info btn-arete">Connect</button>
+					</div>
+					<div class="author-data">
+						<h5 class="primary-color"><strong>Kalyani Chandramouli </strong></h5>
+						<p>Kalyani Chandramouli dabbles between English literature, Tamil and geography as a teacher. For the last two decades, Chennai-based Kalyani has been teaching and mentoring visually impaired students. Empathy is her main instrument – as she shares with us her way of teaching maps to scores of visually challenged students. Kalyani likes to call herself a “volunteer” for visually impaired students. </p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="related-posts">
+					<h3>These might also interest you</h3>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+				<hr class="bottom-line">
+					<ul class="comment-strip">
+						<li title="45 Comments"><span class="change-icon story-comments"><i class="fa fa-comment-o" aria-hidden="true">&nbsp;45</i><i class="fa fa-comment" aria-hidden="true">&nbsp;45</i></span></li>
+						<li title="20 Shares"><span class="change-icon story-comments"><i class="fa fa-share-square-o" aria-hidden="true">&nbsp;20</i><i class="fa fa-share-square" aria-hidden="true">&nbsp;20</i></span></li>
+						<li title="38 Likes"><span class="change-icon story-comments"><i class="fa fa-heart-o" aria-hidden="true">&nbsp;38</i><i class="fa fa-heart" aria-hidden="true">&nbsp;38</i></span></li>
+						<li><h4><strong>Discussion</strong></h4></li>
+						<li>
+							<button type="button" class="btn btn-sm btn-info btn-arete">Give Ratings</button>
+							<span class="starRating">
+					        <input id="rating5" type="radio" name="rating" value="5">
+					        <label for="rating5">5</label>
+					        <input id="rating4" type="radio" name="rating" value="4">
+					        <label for="rating4">4</label>
+					        <input id="rating3" type="radio" name="rating" value="3" checked>
+					        <label for="rating3">3</label>
+					        <input id="rating2" type="radio" name="rating" value="2">
+					        <label for="rating2">2</label>
+					        <input id="rating1" type="radio" name="rating" value="1">
+					        <label for="rating1">1</label>
+					      </span>
+						</li>
+					</ul>
+				<hr class="bottom-line">
+			</div>
+			<div class="col-md-7 col-md-offset-2">
+				<div class="make-comment">
+					<img src="../img/dummy.png" class="avatar img-responsive">
+					<div class="comment-box">
+						<textarea class="comment" rows="5"></textarea>
+						<button title="This feature has been disabled in Alpha Version" class="btn btn-arete btn-sm btn-comment disabled">Comment</button>
+					</div>
+				</div>
+				<div class="recent-comments">
+					<h5><strong>Recent Comments</strong></h5>
+					<div class="comment-area">
+						<img src="../img/dummy.png" class="../img-responsive avatar">
+						<div class="comment-text">
+							<strong>Arete</strong>
+							<small><strong>14th October 2016</strong></small>
+							<p>We appriciate author's practices and initiatives to teach students in different and more intutive ways. It makes a classroom a joyful place and helps student grasp better and faster. </p>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>© Copyright 2016. DIC, University of Delhi</p>
+	</div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

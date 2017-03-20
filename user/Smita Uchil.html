@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+
+    <title>Eduvator</title>
+
+    <meta name="description" content="Arete">
+	<meta name="keywords" content="cover, reveal, grid, svg, animated, path, mask, image" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,500i,600,600i,700,700i,800,900" rel="stylesheet">
+
+    <!-- css3-mediaqueries.js for IE less than 9 -->
+
+	<!-- [if lt IE 9]>ß
+
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+	<![endif]-->
+  </head>
+  <body>
+    <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	        <div class="modal-footer">
+	        	<button type="button" class="close" data-dismiss="modal">x</button>
+	      	</div>
+	        <div class="bs-example bs-example-tabs">
+	            <ul id="myTab" class="nav nav-tabs">
+	              <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+	              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+	            </ul>
+	        </div>
+	        <div class="social-login">
+                                    <a class="circle twitter" href="#">
+                                        <i class="fa fa-twitter fa-fw"></i>
+                                    </a>
+                                    <a id="google_login" class="circle google" href="#">
+                                        <i class="fa fa-google-plus fa-fw"></i>
+                                    </a>
+                                    <a id="facebook_login" class="circle facebook" href="#">
+                                        <i class="fa fa-facebook fa-fw"></i>
+                                    </a>
+            </div>
+	      	<div class="modal-body">
+		        <div id="myTabContent" class="tab-content">
+			        <div class="tab-pane fade in" id="why">
+				        <div class="control-group">
+			              <label class="control-label" for="forgot-password">Email Address:</label>
+			              <div class="controls">
+			                <input required="" id="forgot" name="forgot" type="email" class="form-control" placeholder="yourmail@domain.com">
+			              </div>
+			            </div>
+			            <div class="control-group">
+			              <label class="control-label" for="forgot"></label>
+			              <div class="controls">
+			                <button id="recover" name="recover" class="btn btn-success">Recover Password</button>
+			              </div>
+			            </div>
+			        </div>
+			        <div class="tab-pane fade active in" id="signin">
+			            <form class="form-horizontal">
+			            <fieldset>
+			            <!-- Sign In Form -->
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="userid">Username or Email address:</label>
+			              <div class="controls">
+			                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="arete@dudic.io" class="input-medium" required="">
+			              </div>
+			            </div>
+
+			            <!-- Password input-->
+			            <div class="control-group">
+			              <label class="control-label" for="passwordinput">Password:</label>
+			              <div class="controls">
+			                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+			              </div>
+			            </div>
+
+			            <!-- Multiple Checkboxes (inline) -->
+			            <div class="control-group">
+			              <label class="control-label" for="rememberme"></label>
+			              <div class="controls">
+			                <label class="checkbox inline" for="rememberme-0">
+			                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+			                  <span>Remember me</span>
+			                  <a href="#why" data-toggle="tab" aria-expanded="true">Forgot Password :(</a>
+			                </label>
+			              </div>
+			            </div>
+
+			            <!-- Button -->
+			            <div class="control-group">
+			              <label class="control-label" for="signin"></label>
+			              <div class="controls">
+			                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+			              </div>
+			            </div>
+			            </fieldset>
+			            </form>
+			        </div>
+			        <div class="tab-pane fade" id="signup">
+			            <form class="form-horizontal">
+			            <fieldset>
+			            <!-- Sign Up Form -->
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="Email">Email:</label>
+			              <div class="controls">
+			                <input id="Email" name="Email" class="form-control" type="text" placeholder="arete@dudic.io" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="userid">Name:</label>
+			              <div class="controls">
+			                <input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Password input-->
+			            <div class="control-group">
+			              <label class="control-label" for="password">Password:</label>
+			              <div class="controls">
+			                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+			                <em>1-8 Characters</em>
+			              </div>
+			            </div>
+			            
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+			              <div class="controls">
+			                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Button -->
+			            <div class="control-group">
+			              <label class="control-label" for="confirmsignup"></label>
+			              <div class="controls">
+			                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+			              </div>
+			            </div>
+			            </fieldset>
+			            </form>
+			    	</div>
+	    		</div>
+	      	</div>
+	    </div>
+	  </div>
+	</div>
+    <div class="top-bar">
+		<div class="row">
+				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">		
+					<div class="logo">
+						<a href="../index.html">
+						<img class="logo" src="../img/logo.png">
+						</a>
+					</div>		
+					<div class="menu-button">
+						<button class="hamburger" style="display: inline-block;"><i class="fa fa-bars" aria-hidden="true"></i> <span class="visible-lg-inline">Menu</span></button>
+		                <button class="cross" style="display: none;"><i class="fa fa-times" aria-hidden="true"></i> <span class="visible-lg-inline">Menu</span></button>
+	                </div>
+	                <div class="search">
+				       <div>
+				    	<button class="search-open" style="display: inline-block;"><span  class="glyphicon glyphicon-search"></span><span class="visible-lg-inline">&nbsp;Search</span></button>
+		                <button class="search-close" style="display: none;"><span  class="glyphicon glyphicon-search"></span><span class="visible-lg-inline">&nbsp;Search</span></button>
+		               </div>
+				    	<div class="search-popup">
+					  		<div class="search-inner">
+					  		<button class="btn-srch" type="button">
+	                                 <span class=" glyphicon glyphicon-search"></span>
+	                        </button>
+					    	<input type="text" class="form-control search_bar" id="usr" placeholder="e.g, kinematics">
+							<select class="form-control search_select" id="sel1">
+							    <option>--Class--</option>
+							    <option>1st-3rd</option>
+							    <option>4th-6th</option>
+							    <option>7th-8th</option>
+							 </select>
+							 <select class="form-control search_select" id="sel1">
+							    <option>--Subject--</option>
+							    <option>Science</option>
+							    <option>Maths</option>
+							    <option>Humanities</option>
+							 </select>
+					  		</div>
+						</div>
+				  	</div>
+				  	<button class="create-story hidden-xs">
+				  		<a href="../create story.html">
+				  		<div class="story-button"><i class="fa fa-paint-brush" aria-hidden="true"></i>
+	  						<span class="visible-lg-inline">&nbsp;Create Story</span>
+	  					</div>
+	  					</a>
+				  	</button>
+				  	<button class="login" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">
+				  		<div class="create-button"><i class="fa fa-user" aria-hidden="true"></i>
+	  						<span class="visible-lg-inline">Login/Sign-up</span>
+	  					</div>
+				  	</button>
+				  	<div class="social hidden-xs hidden-sm">
+				  		<a href="https://medium.com/@Arete_DIC" target="_blank"> <i class="fa fa-medium fa-2x"></i></a>
+						<a href="https://twitter.com/aretedu" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a>
+				  	</div>
+				</nav>
+				<div class="menu">
+					<div class="menu-arete">
+					    <ul class="r3">
+						    <h4><strong>Arete Links</strong></h4>
+						    <a href="#"><li>Alternative Pedagogy</li></a>
+						    <a href="#"><li>Assessment</li></a>
+						    <a href="#"><li>Building Character</li></a>
+						    <a href="#"><li>Caliber</li></a>
+						    <a href="#"><li>Inclusive classrooms</li></a>
+						    <a href="#"><li>Teacher's diary</li></a>
+						    <a href="#"><li>Tricks and Trade</li></a>
+					    </ul>
+					    <ul class="r3">
+						    <h4><strong>Quick Links</strong></h4>
+						    <a href="../index.html"><li>Home</li></a>
+						    <a href="../about-us.html"><li>About Us</li></a>
+						    <a href="../teachers.html"><li>Teachers</li></a>
+						    <a href="../contact.html"><li>Feedback</li></a>
+						    <a href="../contact.html"><li>Contact Us</li></a>
+						    <a href="#"><li>Privacy Policy</li></a>
+						    <a href="#"><li>Sitemap</li></a>
+					    </ul>
+					    <ul class="r3">
+						    <h4><strong>Initiative By</strong></h4>
+						    <img class="initiative" src="../img/du.png">
+					    </ul>
+					</div>
+				</div> 
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2 profile-col">
+				<div class="profile">
+					<div class="profile-picture">
+						<!--<canvas id="user-icon" width="126" height="126"></canvas>-->
+      					<img class="user-pic img-responsive img-round" src="../img/dummy.png">
+    				</div>
+    				<div class="user-name">
+    					<center>
+	    					<h4 class="name-font">Smita Uchil</h4>
+	    					<div class="links">
+		    					<ul class="pro-social">
+		    						
+		    					</ul>
+	    					</div>
+	    				</center>
+    				</div>
+    				<div class="user-school">
+    					<i class="fa fa-pencil bio-ico" aria-hidden="true"></i><section><article><p>Smita teaches social science at K.D. Ambani Vidyamandir, Jamnagar. She loves interacting with the children. She is passionate about travelling and reading. She uses technology to the maximum in her teaching and tries to make concepts easier to understand for the children.</p></article></section>
+    					
+    					<h5><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;Jamnagar, Gujarat</h5>
+    				</div>
+				</div>
+			</div>
+			<div class="col-md-10 stories-col u-page">
+				<div class="tabbable" id="tabs-11255">
+					<ul class="nav nav-tabs pro-tabs">
+						<li class="active">
+							<a href="#stories-panel" data-toggle="tab"><span>Smita</span>'s Stories</a>
+						</li>
+						<li>
+							<a href="#liked-panel" data-toggle="tab">Favourites</a>
+						</li>
+						<li>
+							<a href="#followers-panel" data-toggle="tab">Followers</a>
+						</li>
+						<li>
+							<a href="#following-panel" data-toggle="tab">Following</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="stories-panel">
+							<div class="col-md-4">
+								<div class="pic-2">
+									<img class="img-responsive" src="../img/smita.jpg">
+								</div>
+								<div class="box-9" id="infobox-12">
+									<p class="heading-9">Fun with Latitudes and Longitudes 
+									</p>
+									<p class="excerpt-9 visible-lg-block">Teaching latitudes has always been a challenge. Using creative activity based techniques can be a fun way to clear concepts that students often cram. 
+									</p>
+									<div class="avatar">
+										<img class="img-circle avatar img-responsive" src="../img/dummy.png">
+									</div>
+									<div class="author-bio">
+			                          <h4 class="avtar-title">Smita Uchil</h4>
+									  <h5>Jamnagar, Gujarat</h5>
+			  						</div>
+			  						<div class="stats-3">
+			  							<span class="change-icon"><i class="fa fa-comment-o" aria-hidden="true">&nbsp;45</i><i class="fa fa-comment" aria-hidden="true">&nbsp;45</i></span>
+			  							<span class="change-icon share"><i class="fa fa-share-square-o" aria-hidden="true">&nbsp;20</i><i class="fa fa-share-square" aria-hidden="true">&nbsp;20</i></span>
+			  							<span class="change-icon like"><i class="fa fa-heart-o" aria-hidden="true">&nbsp;38</i><i class="fa fa-heart" aria-hidden="true">&nbsp;38</i></span>
+			  						</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								
+							</div>
+						</div>
+						<div class="tab-pane" id="liked-panel">
+							<div class="col-md-4">
+								<div class="pic-2">
+									<img class="img-responsive" src="../img/story-illustration2.jpg">
+								</div>
+								<div class="box-9" id="infobox-9">
+									<p class="heading-9">Letter from Karachi: Let students be their own evaluators! 
+									</p>
+									<p class="excerpt-9 visible-lg-block">Suraya Islam, fellow at Teach for Pakistan, thought of making students their own evaluators – freeing them from the shackles of performance-related expectations and the fear of failure.
+									</p>
+									<div class="avatar">
+										<img class="img-circle img-responsive" src="../img/suraya.jpg">
+									</div>
+									<div class="author-bio">
+			                          <h4 class="avtar-title">Suraya Islam</h4>
+									  <h5>Karachi, Pakistan</h5>
+			  						</div>
+			  						<div class="stats-3">
+			  							<span class="change-icon"><i class="fa fa-comment-o" aria-hidden="true">&nbsp;45</i><i class="fa fa-comment" aria-hidden="true">&nbsp;45</i></span>
+			  							<span class="change-icon share"><i class="fa fa-share-square-o" aria-hidden="true">&nbsp;20</i><i class="fa fa-share-square" aria-hidden="true">&nbsp;20</i></span>
+			  							<span class="change-icon like"><i class="fa fa-heart-o" aria-hidden="true">&nbsp;38</i><i class="fa fa-heart" aria-hidden="true">&nbsp;38</i></span>
+  									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="followers-panel">
+							<div class="col-md-3 users">
+  								<div class="following">
+									<div class="profile-picture">
+										<!--<canvas id="user-icon" width="126" height="126"></canvas>-->
+				      					<img class="user-pic responsive" src="../img/arete social.png">
+				    				</div>
+				    				<div class="user-name">
+				    					<center>
+					    					<h4 class="name-font">Arete</h4>
+					    					<div class="links">
+						    					<ul class="pro-social">
+						    						<li><a href="http://arete.dudic.io" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+						    						<li><a href="https://www.facebook.com/aretedic/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						    						<li><a href="https://twitter.com/aretedu" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						    					</ul>
+					    					</div>
+					    				</center>
+				    				</div>
+				    				<center>
+				    					<div class="following-btns">
+				    					<button type="button" class="btn btn-info">Message</button>
+				    					<button type="button" class="btn btn-success unfollow"><span>Following</span></button>
+				    					</div>
+				    				</center>
+  								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="following-panel">
+							<div class="col-md-3 users">
+  								<div class="following">
+									<div class="profile-picture">
+										<!--<canvas id="user-icon" width="126" height="126"></canvas>-->
+				      					<img class="user-pic responsive" src="../img/arete social.png">
+				    				</div>
+				    				<div class="user-name">
+				    					<center>
+					    					<h4 class="name-font">Arete</h4>
+					    					<div class="links">
+						    					<ul class="pro-social">
+						    						<li><a href="http://arete.dudic.io" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+						    						<li><a href="https://www.facebook.com/aretedic/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						    						<li><a href="https://twitter.com/aretedu" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						    					</ul>
+					    					</div>
+					    				</center>
+				    				</div>
+				    				<center>
+				    					<div class="following-btns">
+				    					<button type="button" class="btn btn-info">Message</button>
+				    					<button type="button" class="btn btn-success unfollow"><span>Following</span></button>
+				    					</div>
+				    				</center>
+  								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>© Copyright 2016. DIC, University of Delhi</p>
+	</div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

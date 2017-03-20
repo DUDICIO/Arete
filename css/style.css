@@ -1,0 +1,1041 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+.primary-color {
+    color: #e45e5e;
+}
+.padding-bottom {
+    padding-bottom: 10px;
+}
+button:focus {outline:0;}
+.footer {
+    background: #393939;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 15px;
+}
+.fa {
+    padding: 0 5px;
+}
+.footer p {
+    margin: 0;
+}
+.top-bar {
+    margin: 0;
+}
+.hamburger{
+  background:none;
+  position:relative;
+  top:0;
+  right:0;
+  line-height:45px;
+  padding:0px 15px 0px 15px;
+  color:#000;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+i.fa-times {
+    font-size: 23px;
+}
+.cross {
+    background: none;
+    position: relative;
+    top: 0px;
+    right: 0;
+    padding: 0px 15px 0px 15px;
+    color: #000;
+    border: 0;
+    font-size: 1.4em;
+    line-height: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    z-index: 10000000000000;
+}
+.menu {
+    z-index: 2;
+    font-weight: 600;
+    font-size: 14px;
+    width: 100%;
+    background: #fff;
+    position: relative;
+    text-align: center;
+    top: 0;
+    margin: -5px 0 5px 0px;
+    overflow: hidden;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.50);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.50);
+    border-top: 2px solid #ccc;
+}
+.menu-arete {
+    width: 100%;
+    overflow: auto;
+    padding: 15px;
+}
+.r3 {
+    width: 33.33%;
+    float: left;
+    padding: 0 10%;
+}
+.menu ul {margin: 0; list-style-type: none; list-style-image: none; text-align: left;}
+.menu li {display: block;   padding:3px 0 3px 0;}
+.menu li:hover{display: block; padding:3px 0 3px 0; color:#e45e5e;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:#333;}
+.menu ul li a:hover {  color: #333; text-decoration:none;}
+.menu a{text-decoration:none; color:#333;}
+.menu a:hover{text-decoration:none; color:#333;}
+.menu-button {
+    padding-top: 15px;
+    width: 30%;
+    float: left;
+    text-align: right;
+}
+.logo {
+    width: 19%;
+    position: relative;
+    float: left;
+    padding-top: 5px;
+    margin-left: 19px;
+}
+img.logo {
+    height: 40px;
+    width: auto;
+    margin-top: 10px;
+}
+.storybox a {
+    text-decoration: none;
+    color: inherit;
+}
+.storybox a:hover {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.9;
+}
+/* Top Search CSS Codes */
+.search {
+    position: relative;
+    float: left;
+    width: 10%;
+    background: #43b9f6;
+    color: white;
+    margin-top: 17px;
+    margin-left: 8%;
+    font-size: 17px;
+    text-align: center;
+}
+.search-popup {
+    position: absolute;
+    top: 40px;
+    margin-left: 0px;
+    padding: 5px;
+    background: #43b9f6;
+    display: none;
+    width: 100%;
+}
+input.search_bar {
+    margin-bottom: 2px;
+}
+select.search_select {
+    margin-bottom: 2px;
+}
+button.search-open {
+    background: #43b9f6;
+    border: none;
+    width: 100%;
+    height: 40px;
+}
+button.search-close {
+    background: #43b9f6;
+    border: none;
+    width: 100%;
+    height: 40px;
+}
+button.btn-srch {
+    position: absolute;
+    right: 6px;
+    background: none;
+    color: #43b9f6;
+    border: none;
+    padding: 5px 7px;
+}
+button.btn-srch:hover {
+    color: #2a81af;
+}
+/* Top Search CSS Codes End Here */
+
+.glyphicon-home{
+  color:white; 
+  font-size:1.5em; 
+  margin-top:5px; 
+  margin:0 auto;
+}
+.create-story {
+    width: 10%;
+    float: left;
+    border: none;
+    margin: 17px 0 0 .2%;
+    background: none;
+    padding: 0;
+}
+.create-story a {
+    text-decoration: none;
+}
+.story-button {
+    background: #e45e5e;
+    color: white;
+    padding: 9px 0 11px 0%;
+}
+button.login {
+    width: 10%;
+    float: left;
+    border: none;
+    margin: 17px 0 0 .2%;
+    background: none;
+    padding: 0;
+}
+.create-button {
+    background: #00c976;
+    color: white;
+    padding: 9px 3px 11px 0px;
+}
+/* Social Buttons CSS Codes */
+.social {
+    float: left;
+    width: 5%;
+    display: inline-flex;
+    margin: 23px 0 0 0px;
+}
+i.fa-medium.fa-2x {
+    color: #c1c1c1;
+}
+i.fa-medium.fa-2x:hover {
+    color: #00AB6C;
+}
+i.fa-twitter.fa-2x {
+    color: #c1c1c1;
+}
+i.fa-twitter.fa-2x:hover {
+    color: #0084b4;
+}
+/* Social CSS Ends here */
+/* Slider CSS Codes*/
+.no-padding-carousel {
+    padding: 10px 15px 0 15px;
+}
+.carousel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+}
+/* Stories CSS Codes */
+.no-padding-stories {
+    padding: 0 15px;
+}
+.storybox {
+    margin-top: 10px;
+    height: auto;
+    overflow: hidden;
+}
+span.like {
+    float: right;
+    cursor: pointer;
+}
+.share {
+    margin-left: 40%;
+    cursor: pointer;
+}
+.stats-4 > .share {
+    margin-left: 33%;
+}
+.comments {
+    cursor: pointer;
+}
+.change-icon > .fa + .fa,
+.change-icon:hover > .fa {
+  display: none;
+}
+.change-icon:hover > .fa + .fa {
+  display: inline-block;
+}
+.no-padding-left {
+    margin: 0;
+    padding: 0;
+}
+.no-padding-right {
+    margin: 0;
+    padding: 0;
+}
+.no-padding-center {
+    margin: 0;
+    padding: 0 10px 0 0;
+}
+/* Storybox 1 Css Code */
+.story {
+    padding-right: 1px;
+}
+.box-1 {
+    background: #00a2a4;
+    color: white;
+    padding: 15px 25px 15px 25px;
+    overflow: hidden;
+    margin: 0;
+}
+.box-1:hover {
+    background: #018385;
+}
+p.heading-1 {
+    font-size: 35px;
+    margin-bottom: 4%;
+    height: 150px;
+    overflow: hidden;
+}
+p.excerpt-1 {
+    font-size: 17px;
+    margin-bottom: 9%;
+}
+.avatar {
+    float: left;
+    margin: 0 2% 0 0;
+    display: block;
+    max-height: 80px;
+    max-width: 80px;
+}
+.img-avatar {
+    max-height: 80px;
+}
+img.img-profile {
+    height: 80px;
+    width: 80px;
+}
+h4.avtar-title {
+    padding: 12px 0 0 0;
+}
+.stats {
+    margin: 10% 0 0 0;
+}
+.pic-1 {
+    overflow: hidden;
+    margin-top: 0;
+    height: inherit;
+}
+img.img-1 {
+    height: inherit;
+    width: 100%;
+}
+/* Storybox 2 CSS code */
+.box-2 {
+    background: #d94560;
+    color: white;
+    padding: 18px 25px;
+    overflow: hidden;
+    margin: 0 0 0 0;
+    height: inherit;
+}
+.box-2:hover {
+    background: #a92b42;
+}
+.illustration2 {
+    padding-right: 1px;
+}
+p.heading-2 {
+    font-size: 2em;
+    height: 170px;
+}
+p.excerpt-2 {
+    font-size: 18px;
+    margin-bottom: 16%;
+    height: 36%;
+}
+.stats-2 {
+    margin-top: 10%;
+}
+img.img-2 {
+    margin-bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    height: inherit;
+}
+.pic-2 {
+    align-items: center;
+    max-height: 220px;
+    height: auto;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-bottom: 1px;
+}
+.box-3 {
+    background: #007f9f;
+    color: white;
+    padding: 16px 25px;
+    overflow: hidden;
+    margin-top: 0px;
+}
+.box-3:hover {
+    background: #046781;
+}
+p.heading-3 {
+    font-size: 20px;
+    margin-bottom: 4%;
+    min-height: 56px;
+}
+p.excerpt-3 {
+    font-size: 16px;
+    margin-bottom: 4%;
+}
+.stats-3 {
+    margin-top: 10%;
+}
+/* Storybox 3 codes */
+p.heading-4 {
+    font-size: 15px;
+    height: 61px;
+    font-weight: 400;
+    overflow: hidden;
+}
+.infobox-4 {
+    background: #ff9147;
+    color: white;
+    padding: 15px 15px;
+    overflow: hidden;
+    margin: 0 0 0 0;
+    height: inherit;
+}
+.infobox-4:hover {
+    background: #e16918;
+}
+.infobox-5 {
+    background: #7f7f7f;
+    color: white;
+    padding: 15px 15px;
+    overflow: hidden;
+    margin: 0 0 0 0;
+    height: inherit;
+}
+.infobox-5:hover {
+    background: #676060;
+}
+.infobox-6 {
+    background: #e74c3c;
+    color: white;
+    padding: 15px 15px;
+    overflow: hidden;
+    margin: 0 -4px 0 0;
+    height: inherit;
+}
+.infobox-6:hover {
+    background: #c73324;
+}
+div#box-6 {
+    margin-bottom: 0;
+}
+img.img-4 {
+    height: 55px;
+    width: 55px;
+}
+.author-bio-4 {
+    padding-top: 1px;
+    height: 70px;
+}
+.stats-4 {
+    margin-top: 8%;
+}
+.no-padding {
+    margin: 0;
+    padding: 0;
+}
+.no-padding-left2 {
+    margin: 0;
+    padding: 0;
+}
+img.img-8 {
+    width: 100%;
+}
+
+/* Storybox 4 Codes */
+.infobox-7 {
+    background: #01bae8;
+    color: white;
+    padding: 10px 18px;
+    overflow: hidden;
+    margin: 0;
+}
+.infobox-7:hover {
+    background: #088bab;
+}
+img.img-9 {
+    width: 100%;
+    padding-right: 1px;
+}
+p.excerpt-7 {
+    font-size: 16px;
+    margin-bottom: 7%;
+    height: 89px;
+}
+.infobox-8 {
+    background: #34495e;
+    color: white;
+    padding: 10px 19px;
+    overflow: hidden;
+    margin: 0 -2px 0 0;
+}
+.infobox-8:hover {
+    background: #37414b;
+}
+div#infobox-9 {
+    background: #9b59b6;
+}
+div#infobox-9:hover {
+    background: #783d90;
+}
+div#infobox-10 {
+    background: #27ae60;
+}
+div#infobox-10:hover {
+    background: #13783d;
+}
+div#infobox-11 {
+    background: #16a085;
+}
+div#infobox-11:hover {
+    background: #027c64;
+}
+div#infobox-12 {
+    background: #e67e22;
+}
+div#infobox-12:hover {
+    background: #cc6000;
+}
+.no-padding-center2 {
+    margin: 0;
+    padding: 0;
+}
+.box-9 {
+	background: #007f9f;
+    color: white;
+    padding: 16px 20px;
+    overflow: hidden;
+    margin-top: 0px;
+}
+.no-padding-right2 {
+    padding: 0;
+}
+p.excerpt-12 {
+    font-size: 16px;
+    margin-bottom: 5%;
+    max-height: 66px;
+}
+p.excerpt-9 {
+    font-size: 16px;
+    margin-bottom: 5%;
+    min-height: 38%;
+}
+p.heading-9 {
+    font-size: 20px;
+    margin-bottom: 4%;
+    min-height: 56px;
+}
+.last-1 {
+    width: 25%;
+    padding-right: 5px;
+}
+.last-2 {
+    width: 25%;
+    padding: 0 5px 0 5px;
+}
+.last-3 {
+    width: 25%;
+    padding: 0 5px 0 5px;
+}
+.last-4 {
+    width: 25%;
+    padding: 0 0 0 5px;
+}
+/* Profile Page styling */
+.profile-picture {
+    background-color: rgba(244, 244, 244, 0.75);
+    width: 126px;
+    height: 126px;
+    border-radius: 126px;
+    margin: 20px calc(50% - 63px) 20px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 35px;
+}
+img.user-pic {
+    width: 126px;
+}
+h4.name-font {
+    font-weight: 600;
+}
+.user-name {
+    margin-bottom: 20px;
+}
+ul.pro-social {
+    list-style: none;
+    display: inline-flex;
+    padding: 0;
+}
+.stories-col {
+    padding: 0;
+    padding-right: 1%;
+    height: 100%;
+    border-left: 1px solid #ccc;
+    min-height: 100vh;
+}
+li.active {
+    margin-bottom: 0;
+}
+.pro-tabs {
+    border-right: 1px solid #ccc;
+    background: #a0a0a0;
+    display: flex;
+}
+.pro-tabs>li>a {
+    color: white;
+    font-weight: 600;
+}
+.pro-tabs>li.active>a, .pro-tabs>li.active>a:focus, .pro-tabs>li.active>a:hover {
+    color: #fff;
+    cursor: default;
+    background-color: #e45e5e;
+    border: 1px solid #e45e5e;
+    border-bottom-color: transparent;
+}
+.pro-tabs>li {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+}
+.tab-content {
+    padding: 20px;
+}
+i.bio-ico {
+    width: 30px;
+    float: left;
+}
+.following {
+    border: 1px solid #ccc;
+}
+.following-btns {
+    padding: 0 0 20px 0;
+}
+button.unfollow:hover:before {
+    content: "Unfollow";
+}
+button.unfollow:hover span {
+    display: none;
+}
+button.unfollow {
+    width: 7em;
+}
+.users {
+    padding: 10px;
+}
+/* Story Page CSS */
+.padding-top {
+    padding-top: 20px;
+}
+.story-nav-left {
+    width: 70%;
+    float: left;
+}
+.btn-arete {
+    background: #e45e5e;
+    color: white;
+}
+.btn-arete:hover {
+    background: #a02825;
+}
+.tags {
+    display: inline;
+    padding: .8em;
+    border: 2px solid #ccc;
+    color: #ccc;
+    cursor: pointer;
+    margin: 0 1px;
+}
+.tags:hover {
+    border: 2px solid #e45e5e;
+    color: white;
+    background: #e45e5e;
+}
+.tags a {
+    color: inherit;
+    text-decoration: none;
+}
+textarea.comment {
+    width: 100%;
+    border-color: #e45e5e;
+}
+.comment-box {
+    overflow: hidden;
+}
+.btn-comment {
+    width: 100%;
+}
+.make-comment {
+    padding: 10px 0 20px;
+}
+.comment-area {
+    width: calc(100% - 90px);
+    float: right;
+    padding: 10px;
+    overflow: hidden;
+    border: 1px solid #e45e5e;
+    margin: 10px 0;
+}
+.comment-text {
+    width: calc(100% - 100px);
+    float: right;
+}
+.recent-comments h5 {
+    margin-left: 88px;
+}
+.comment-text strong, small {
+    padding: 0 0 5px;
+    position: relative;
+    display: block;
+}
+.impact {
+    height: 41px;
+}
+.impact span {
+    position: relative;
+    line-height: 41px;
+    font-weight: 600;
+}
+.subjects {
+    width: auto;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 1%;
+}
+.classes {
+    width: auto;
+    float: left;
+}
+article.story-content {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: #555555;
+    margin: 20px 0 10px;
+}
+article.story-content p {
+    padding-bottom: 20px;
+}
+.main-image {
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 20px;
+    max-height: 700px;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.main-image h1 {
+    padding: 15% 20% 15px 20%;
+    color: white;
+    font-weight: bold;
+}
+.prettyline {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+.social-login {
+    margin: 40px 0 0 0;
+    text-align: center;
+    font-size: 16px;
+}
+.circle {
+    color: #FFFFFF;
+    border-radius: 100px;
+    display: inline-block;
+    margin: 0 17px;
+    padding: 15px;
+}
+.twitter {
+    background-color: #0099e5;
+}
+.google {
+    background-color: #F74933;
+}
+.facebook {
+    background-color: #455CA8;
+    color: #FFFFFF;
+}
+.control-group .checkbox input[type=checkbox] {
+    margin: 3px;
+}
+.form-horizontal span {
+    padding: 0 20px;
+}
+#closeslide {
+    position: absolute;
+    right: 40px;
+    z-index: 20;
+    color: white;
+    font-size: 20px;
+    background: rgba(204, 204, 204, 0.50);
+    padding: 10px;
+    cursor: pointer;
+    line-height: 10px;
+}
+img.initiative {
+    padding: 10% 0;
+}
+.user-school p {
+    font-weight: 500;
+}
+.main-image h5 {
+    color: white;
+    font-size: 20px;
+}
+.main-image p {
+    color: white;
+    margin-top: 30px;
+}
+/* About Us page */
+.about-us h1, h4 {
+    font-weight: 400;
+}
+.about-us {
+    padding: 50px 20px;
+}
+.how-started {
+    background-size: cover;
+    color: #fff;
+    padding: 50px 0;
+}
+.how-started p {
+    font-family: 'Roboto', sans-serif;
+}
+img.about-img {
+    padding-top: 50px;
+}
+/* Story Page */
+.tag-div .tags {
+    padding: 5px 7px;
+    border-radius: 3px;
+    line-height: 1.2em;
+    text-transform: capitalize;
+    display: inline-block;
+    margin: .4% 0;
+}
+.tag-div h5 {
+    padding: 30px 0 15px;
+}
+img.inner-story-img {
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    margin: 1% 1% 2%;
+}
+.teacher-tip {
+    background: rgb(43, 111, 171);
+    margin-top: 25px;
+    color: white;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.story-author {
+    padding: 40px 0;
+    overflow: auto;
+}
+.author-img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 3px;
+    margin: 10px 0;
+}
+.author-imgdiv {
+    width: 15%;
+    float: left;
+    padding: 0 10px 0 0;
+}
+.author-imgdiv button {
+    width: 100%;
+}
+.author-data {
+    width: 85%;
+    float: right;
+    height: auto;
+    padding: 0 10px;
+}
+.author-data p {
+    height: 105px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: #555555;
+}
+.bottom-line {
+    border-top: 2px solid #e45e5e;
+}
+.story-comments .fa {
+    color: #e45e5e;
+    font-size: 18px;
+    font-weight: bold;
+}
+ul.comment-strip {
+    list-style: none;
+    -webkit-padding-start: 10px;
+}
+ul.comment-strip li {
+    display: inline-block;
+    padding-right: 7%;
+}
+.story-author h5 {
+    color: #e45e5e;
+}
+.related-stories {
+    width: 30%;
+    height: 100px;
+    background: #eee;
+    box-shadow: 0 1px 7px rgba(0,0,0,0.20);
+    display: inline-block;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 10px 1%;
+}
+img.related-img {
+    height: 95%;
+    float: right;
+    max-width: 30%;
+    padding: 1%;
+}
+.related-content {
+    width: 70%;
+    float: left;
+    padding: 1%;
+    height: 95%;
+}
+.related-content p {
+    font-weight: 600;
+    font-size: small;
+    margin: 0 0 5px 0;
+}
+.starRating:not(old) {
+    display: inline-block;
+    width: 9.5em;
+    height: 1.70em;
+    overflow: hidden;
+    vertical-align: middle;
+    float: right;
+}
+
+.starRating:not(old) > input{
+  margin-right : -100%;
+  opacity      : 0;
+}
+
+.starRating:not(old) > label{
+  display         : block;
+  float           : right;
+  position        : relative;
+  background      : url('../img/star-off.svg');
+  background-size : contain;
+}
+
+.starRating:not(old) > label:before{
+  content         : '';
+  display         : block;
+  width           : 1.5em;
+  height          : 1.5em;
+  background      : url('../img/star-on.svg');
+  background-size : contain;
+  opacity         : 0;
+  transition      : opacity 0.2s linear;
+}
+
+.starRating:not(old) > label:hover:before,
+.starRating:not(old) > label:hover ~ label:before,
+.starRating:not(:hover) > :checked ~ label:before{
+  opacity : 1;
+}
+.recent-comments {
+    overflow: auto;
+    padding: 0 3px;
+}
+/* Create Story page */
+.note-editor.note-frame .note-statusbar {
+    background-color: #f5f5f5;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    display: none;
+}
+/* Search Result Page */
+.search-header {
+    padding: 50px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    color: white;
+    background: #FF5F6D;
+    background: -webkit-linear-gradient(to left, #FF5F6D , #FFC371);
+    background: linear-gradient(to left, #FF5F6D , #FFC371);
+}
+/* Teachers page */
+.teacher-img {
+    border-radius: 3px;
+    width: inherit;
+    max-height: 214px;
+}
+.teacher-col {
+    max-height: 251px;
+    background: #ff7e6f;
+    width: 100%;
+}
+.teacher-name {
+    padding: 1px 0;
+}
+.teacher-profile {
+    color: #fff;
+    width: 18%;
+    display: inline-block;
+    margin: 2% 2%;
+}
+.teacher-profile:nth-child(1) .teacher-col {
+    background: #e45e5e;
+}
+.teacher-profile:nth-child(2) .teacher-col {
+    background: #16a085;
+}
+.teacher-profile:nth-child(3) .teacher-col {
+    background: #2980b9;
+}
+.teacher-profile:nth-child(4) .teacher-col {
+    background: #34495e;
+}
+.teacher-profile:nth-child(5) .teacher-col {
+    background: #f39c12;
+}
+.teacher-profile:nth-child(6) .teacher-col {
+    background: #c0392b;
+}
+.teacher-profile:nth-child(7) .teacher-col {
+    background: #8e44ad;
+}
+.teacher-profile:nth-child(8) .teacher-col {
+    background: #2ecc71;
+}
+.teacher-profile:nth-child(9) .teacher-col {
+    background: #7f8c8d;
+}
+.teacher-profile:nth-child(10) .teacher-col {
+    background: #3498db;
+}

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+
+    <title>Eduvator</title>
+
+    <meta name="description" content="Arete">
+	<meta name="keywords" content="cover, reveal, grid, svg, animated, path, mask, image" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,500i,600,600i,700,700i,800,900" rel="stylesheet">
+
+    <!-- css3-mediaqueries.js for IE less than 9 -->
+
+	<!-- [if lt IE 9]>ß
+
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+	<![endif]-->
+  </head>
+  <body>
+  <!-- Modal -->
+	<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	        <div class="modal-footer">
+	        	<button type="button" class="close" data-dismiss="modal">x</button>
+	      	</div>
+	        <div class="bs-example bs-example-tabs">
+	            <ul id="myTab" class="nav nav-tabs">
+	              <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+	              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+	            </ul>
+	        </div>
+	        <div class="social-login">
+                                    <a class="circle twitter" href="#">
+                                        <i class="fa fa-twitter fa-fw"></i>
+                                    </a>
+                                    <a id="google_login" class="circle google" href="#">
+                                        <i class="fa fa-google-plus fa-fw"></i>
+                                    </a>
+                                    <a id="facebook_login" class="circle facebook" href="#">
+                                        <i class="fa fa-facebook fa-fw"></i>
+                                    </a>
+            </div>
+	      	<div class="modal-body">
+		        <div id="myTabContent" class="tab-content">
+			        <div class="tab-pane fade in" id="why">
+				        <div class="control-group">
+			              <label class="control-label" for="forgot-password">Email Address:</label>
+			              <div class="controls">
+			                <input required="" id="forgot" name="forgot" type="email" class="form-control" placeholder="yourmail@domain.com">
+			              </div>
+			            </div>
+			            <div class="control-group">
+			              <label class="control-label" for="forgot"></label>
+			              <div class="controls">
+			                <button id="recover" name="recover" class="btn btn-success">Recover Password</button>
+			              </div>
+			            </div>
+			        </div>
+			        <div class="tab-pane fade active in" id="signin">
+			            <form class="form-horizontal">
+			            <fieldset>
+			            <!-- Sign In Form -->
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="userid">Username or Email address:</label>
+			              <div class="controls">
+			                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="arete@dudic.io" class="input-medium" required="">
+			              </div>
+			            </div>
+
+			            <!-- Password input-->
+			            <div class="control-group">
+			              <label class="control-label" for="passwordinput">Password:</label>
+			              <div class="controls">
+			                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+			              </div>
+			            </div>
+
+			            <!-- Multiple Checkboxes (inline) -->
+			            <div class="control-group">
+			              <label class="control-label" for="rememberme"></label>
+			              <div class="controls">
+			                <label class="checkbox inline" for="rememberme-0">
+			                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+			                  <span>Remember me</span>
+			                  <a href="#why" data-toggle="tab" aria-expanded="true">Forgot Password :(</a>
+			                </label>
+			              </div>
+			            </div>
+
+			            <!-- Button -->
+			            <div class="control-group">
+			              <label class="control-label" for="signin"></label>
+			              <div class="controls">
+			                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+			              </div>
+			            </div>
+			            </fieldset>
+			            </form>
+			        </div>
+			        <div class="tab-pane fade" id="signup">
+			            <form class="form-horizontal">
+			            <fieldset>
+			            <!-- Sign Up Form -->
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="Email">Email:</label>
+			              <div class="controls">
+			                <input id="Email" name="Email" class="form-control" type="text" placeholder="arete@dudic.io" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="userid">Name:</label>
+			              <div class="controls">
+			                <input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Password input-->
+			            <div class="control-group">
+			              <label class="control-label" for="password">Password:</label>
+			              <div class="controls">
+			                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+			                <em>1-8 Characters</em>
+			              </div>
+			            </div>
+			            
+			            <!-- Text input-->
+			            <div class="control-group">
+			              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+			              <div class="controls">
+			                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+			              </div>
+			            </div>
+			            
+			            <!-- Button -->
+			            <div class="control-group">
+			              <label class="control-label" for="confirmsignup"></label>
+			              <div class="controls">
+			                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+			              </div>
+			            </div>
+			            </fieldset>
+			            </form>
+			    	</div>
+	    		</div>
+	      	</div>
+	    </div>
+	  </div>
+	</div>
+    <div class="top-bar">
+		<div class="row">
+				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">		
+					<div class="logo">
+						<a href="../index.html">
+						<img class="logo" src="../img/logo.png">
+						</a>
+					</div>		
+					<div class="menu-button">
+						<button class="hamburger" style="display: inline-block;"><i class="fa fa-bars" aria-hidden="true"></i> <span class="visible-lg-inline">Menu</span></button>
+		                <button class="cross" style="display: none;"><i class="fa fa-times" aria-hidden="true"></i> <span class="visible-lg-inline">Menu</span></button>
+	                </div>
+	                <div class="search">
+				       <div>
+				    	<button class="search-open" style="display: inline-block;"><span  class="glyphicon glyphicon-search"></span><span class="visible-lg-inline">&nbsp;Search</span></button>
+		                <button class="search-close" style="display: none;"><span  class="glyphicon glyphicon-search"></span><span class="visible-lg-inline">&nbsp;Search</span></button>
+		               </div>
+				    	<div class="search-popup">
+					  		<div class="search-inner">
+					  		<button class="btn-srch" type="button">
+	                                 <span class=" glyphicon glyphicon-search"></span>
+	                        </button>
+					    	<input type="text" class="form-control search_bar" id="usr" placeholder="e.g, kinematics">
+							<select class="form-control search_select" id="sel1">
+							    <option>--Class--</option>
+							    <option>1st-3rd</option>
+							    <option>4th-6th</option>
+							    <option>7th-8th</option>
+							 </select>
+							 <select class="form-control search_select" id="sel1">
+							    <option>--Subject--</option>
+							    <option>Science</option>
+							    <option>Maths</option>
+							    <option>Humanities</option>
+							 </select>
+					  		</div>
+						</div>
+				  	</div>
+				  	<button class="create-story hidden-xs">
+				  		<a href="../create story.html">
+				  		<div class="story-button"><i class="fa fa-paint-brush" aria-hidden="true"></i>
+	  						<span class="visible-lg-inline">&nbsp;Create Story</span>
+	  					</div>
+	  					</a>
+				  	</button>
+				  	<button class="login" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">
+				  		<div class="create-button"><i class="fa fa-user" aria-hidden="true"></i>
+	  						<span class="visible-lg-inline">Login/Sign-up</span>
+	  					</div>
+				  	</button>
+				  	<div class="social hidden-xs hidden-sm">
+				  		<a href="https://medium.com/@Arete_DIC" target="_blank"> <i class="fa fa-medium fa-2x"></i></a>
+						<a href="https://twitter.com/aretedu" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a>
+				  	</div>
+				</nav>
+				<div class="menu">
+					<div class="menu-arete">
+					    <ul class="r3">
+						    <h4><strong>Arete Links</strong></h4>
+						    <a href="#"><li>Alternative Pedagogy</li></a>
+						    <a href="#"><li>Assessment</li></a>
+						    <a href="#"><li>Building Character</li></a>
+						    <a href="#"><li>Caliber</li></a>
+						    <a href="#"><li>Inclusive classrooms</li></a>
+						    <a href="#"><li>Teacher's diary</li></a>
+						    <a href="#"><li>Tricks and Trade</li></a>
+					    </ul>
+					    <ul class="r3">
+						    <h4><strong>Quick Links</strong></h4>
+						    <a href="../index.html"><li>Home</li></a>
+						    <a href="../about-us.html"><li>About Us</li></a>
+						    <a href="../teachers.html"><li>Teachers</li></a>
+						    <a href="../contact.html"><li>Feedback</li></a>
+						    <a href="../contact.html"><li>Contact Us</li></a>
+						    <a href="#"><li>Privacy Policy</li></a>
+						    <a href="#"><li>Sitemap</li></a>
+					    </ul>
+					    <ul class="r3">
+						    <h4><strong>Initiative By</strong></h4>
+						    <img class="initiative" src="../img/du.png">
+					    </ul>
+					</div>
+				</div> 
+		</div>
+	</div>
+	<div class="">
+		<div class="row">
+			<div class="main-image no-padding" style="background-image: url(../img/bg.jpg);">
+				<center><h1>Fun with Latitudes and Longitudes</h1></center>
+				<center><h5 class="col-md-8 col-md-offset-2">Teaching Longitudes and Lattitudes is always a challenge for teachers. What do the degrees indicate? Are latitudes and longitudes relevant to us? Why are the north pole and south pole ﬁxed points? These are some questions that my students ask. Here is how to make them learn that.</h5></center>
+				<div class="clearfix"></div>
+				<center><a href="#"><p><strong>Smita Uchil</strong></p></a><p>Published on <span>14 October 2016</span></p></center>
+			</div>
+			<div class="col-md-8 col-md-offset-2 padding-top">
+				<div class="story-nav-left">
+					<div class="subjects">
+						<button class="btn btn-arete sub" type="button">
+						  Subjects <span class="badge">1</span>
+						</button>
+						<div class="tags">
+							Geography
+						</div>
+					</div>
+					<div class="classes">
+						<button class="btn btn-arete sub" type="button">
+						  Classes <span class="badge">1</span>
+						</button>
+						<div class="tags">
+							4th - 6th
+						</div>
+					</div>
+				</div>
+				<div class="story-nav-right">
+					<div class="progress impact">
+					  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+					    <span>Impact Quotient (80%)</span>
+					  </div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<article class="story-content">
+					<p>Most students rarely realize that the degrees we use for measuring latitudes and longitudes are the same as the ones we use in geometry. Many children use GPS when they are travelling but not all of them know that latitudes and longitudes are used by the system to trace locations. A lot of children also believe that the north pole and south pole are fi xed points because the globe is held by a stand.</p>
+					<p><strong>How I taught latitudes and longitudes </strong></p>
+					<p>I took the children to the ground and drew a 10x10 grid. I numbered the 10 horizontal lines 1 to 10 and the 10 vertical lines A to J. Then I gave each child a chit that told him/her where he/she should stand in the grid &ndash; 1B, 2D, etc. I set a time limit in which the children should reach their positions. One child was asked to catch those children who weren&rsquo;t in their position on time.</p>
+					<center><img src="../img/fun-latitudes-000.jpg" class="inner-story-img" style="width: 50%;"></center>
+					<p>Later I divided the class into groups of fi ve and gave each group a softball. Two of these softballs had latitudes and longitudes drawn on them and the rest did not have any markings. The children had to use a marker to plot a point on the softball and then identify the location of the point. How tricky this small task became for the groups that didn&rsquo;t have any latitudes and longitudes marked! This task drove home the need for latitudes and longitudes. Then a knitting needle was inserted into the ball to represent the axis so now we had two fi xed points which we named, north pole and south pole.</p>
+					<center><img src="../img/fun-latitudes-001.jpg" class="inner-story-img" style="width: 50%;"></center>
+					<p>Finding a middle point on the axis we divided the softballs into two halves. Now we had two hemispheres. The one on the top was called the northern hemisphere and the one at the bottom was called the southern hemisphere and the line at which we had cut the ball was the equator.</p>
+					<center><img src="../img/fun-latitudes-002.jpg" class="inner-story-img" style="width: 50%;"></center>
+					<p>For the sake of convenience we cut the northern hemisphere vertically into two halves. We placed the 180 degree protractor at the centre of the diameter of&nbsp;the Earth (softball) and measured 23&frac12;&ordm; on both sides and then joined the two points to get the semicircle of the measure 23&frac12;&ordm;. Similarly we measured 66&frac12;&ordm;.</p>
+					<center><img src="../img/fun-latitudes-003.jpg" class="inner-story-img" style="width: 50%;"></center>
+					<p>Now we placed a 360-degree protractor on the southern hemisphere and measured several longitudes and drew arcs joining these degrees to the south pole thus getting the longitudes. Since we were doing this on a 3D fi gure, it helped correct many misconceptions that the children had had.</p>
+					<center><img src="../img/fun-latitudes-004.jpg" class="inner-story-img" style="width: 50%;"></center>
+					<blockquote>
+					    <p>&ldquo;Geography is all about making connections! It&rsquo;s a wonderful interconnection between science, mathematics and earth sciences.&rdquo;</p>
+					</blockquote>
+					<center><img src="../img/fun-latitudes-005.jpg" class="inner-story-img" style="width: 50%;"></center>
+					<p>This was a comment by our former principal Mr. Sundaram. This inspired me to try and understand the topic in greater detail and take up the challenge of getting the children to do things instead of just getting them to draw latitudes and longitudes on the board.</p>
+				</article>
+				<div class="tag-div">
+					<h5 class="primary-color"><strong>Topics</strong></h5>
+					<div class="tags"><a href="#">Smita Uchil</a></div> <div class="tags">Geography</div> <div class="tags">Activity based learning</div> <div class="tags">lattitudes</div> <div class="tags">longitudes</div> <div class="tags">map</div> <div class="tags">globe</div>
+				</div>
+				<div class="story-author">
+					<h5><strong>Creative Curator</strong></h5>
+					<div class="author-imgdiv">
+						<img class="author-img img-responsive" src="../img/dummy.png">
+						<button class="btn btn-sm btn-info btn-arete">Connect</button>
+					</div>
+					<div class="author-data">
+						<h5 class="primary-color"><strong>Smita Uchil</strong></h5>
+						<p>Smita teaches social science at K.D. Ambani Vidyamandir, Jamnagar. She loves interacting with the children. She is passionate about travelling and reading. She uses technology to the maximum in her teaching and tries to make concepts easier to understand for the children.</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="related-posts">
+					<h3>These might also interest you</h3>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+					<div class="related-stories">
+						<div class="related-content">
+							<p>Breaking the silence in the classroom: Chirengi’s Silence</p>
+							<p class="primary-color"><strong>Rejum Potum</strong></p>
+						</div>
+						<img class="related-img" src="../img/chirengi.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+				<hr class="bottom-line">
+					<ul class="comment-strip">
+						<li title="45 Comments"><span class="change-icon story-comments"><i class="fa fa-comment-o" aria-hidden="true">&nbsp;45</i><i class="fa fa-comment" aria-hidden="true">&nbsp;45</i></span></li>
+						<li title="20 Shares"><span class="change-icon story-comments"><i class="fa fa-share-square-o" aria-hidden="true">&nbsp;20</i><i class="fa fa-share-square" aria-hidden="true">&nbsp;20</i></span></li>
+						<li title="38 Likes"><span class="change-icon story-comments"><i class="fa fa-heart-o" aria-hidden="true">&nbsp;38</i><i class="fa fa-heart" aria-hidden="true">&nbsp;38</i></span></li>
+						<li><h4><strong>Discussion</strong></h4></li>
+						<li>
+							<button type="button" class="btn btn-sm btn-info btn-arete">Give Ratings</button>
+							<span class="starRating">
+					        <input id="rating5" type="radio" name="rating" value="5">
+					        <label for="rating5">5</label>
+					        <input id="rating4" type="radio" name="rating" value="4">
+					        <label for="rating4">4</label>
+					        <input id="rating3" type="radio" name="rating" value="3" checked>
+					        <label for="rating3">3</label>
+					        <input id="rating2" type="radio" name="rating" value="2">
+					        <label for="rating2">2</label>
+					        <input id="rating1" type="radio" name="rating" value="1">
+					        <label for="rating1">1</label>
+					      </span>
+						</li>
+					</ul>
+				<hr class="bottom-line">
+			</div>
+			<div class="col-md-7 col-md-offset-2">
+				<div class="make-comment">
+					<img src="../img/dummy.png" class="avatar img-responsive">
+					<div class="comment-box">
+						<textarea class="comment" rows="5"></textarea>
+						<button title="This feature has been disabled in Alpha Version" class="btn btn-arete btn-sm btn-comment disabled">Comment</button>
+					</div>
+				</div>
+				<div class="recent-comments">
+					<h5><strong>Recent Comments</strong></h5>
+					<div class="comment-area">
+						<img src="../img/dummy.png" class="../img-responsive avatar">
+						<div class="comment-text">
+							<strong>Arete</strong>
+							<small><strong>14th October 2016</strong></small>
+							<p>We appriciate author's practices and initiatives to teach students in different and more intutive ways. It makes a classroom a joyful place and helps student grasp better and faster. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>© Copyright 2016. DIC, University of Delhi</p>
+	</div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>
